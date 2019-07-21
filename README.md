@@ -99,6 +99,7 @@ Things you may want to cover:
 ## association
 - has_many :item_categories
 - has_many :items, through: :item_categories
+- has_ancestry
 
 
 ## images table
