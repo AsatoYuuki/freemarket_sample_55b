@@ -78,7 +78,7 @@ Things you may want to cover:
 - has_many :categories, through: :item_categories
 - has_many :item_categories
 - belongs_to :user
-- belongs_to: brand
+- belongs_to :brand
 
 
 ## item_categories table
@@ -113,7 +113,7 @@ Things you may want to cover:
 - belongs_to :item
 
 
-## brand table
+## brands table
 |Colmun|Type|Options|
 |------|----|-------|
 |name|string|index: true|
