@@ -51,7 +51,8 @@ Things you may want to cover:
 - has_many :items
 - has_many :comments
 - has_many :likes
-- has_many :reviews
+- has_many :sender_reviews, class_name: 'Review', :foreign_key => 'sender_id'
+- has_many :receiver_reviews, class_name: 'Review', foreign_key => 'receiver_id'
 
 
 ## items table
@@ -148,9 +149,10 @@ Things you may want to cover:
 ## reviews table
 |Colmun|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|receive_user_id|integer|null: false|
+|sender_id|integer|null: false, foreign_key: true|
+|receiver_id|integer|null: false|
 
 ## association
-- belongs_to :user
+- belongs_to :sender, class_name: 'User', :foreign_key => 'sender_id'
+- belongs_to :receiver, class_name: 'User', :foreign_key => 'receiver_id'
 
