@@ -1,3 +1,105 @@
 // Place all the styles related to the test controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'colors';
+
+* {
+  box-sizing: border-box;
+}
+
+
+.header{
+  height:100px;
+  width: 100%;
+
+  &__box{
+    width: 1020px;
+    margin: 0 210px;
+    background-color: $white;
+    margin-top: 8px;
+
+    &__top{
+      height: 40px;
+      display: flex;
+
+      &__h1{
+        height: 50px;
+        width: 165px;
+      };
+
+      &__right{
+        width: calc( 100% - 165px );
+        border: solid 1px #6091d3;
+        border-radius: 4px;
+        display: flex;
+        position: relative;
+      
+        &__search{
+          width: 815px;
+          background-color: #f5f5f5;
+          border-radius: 4px;
+        };
+
+        &__icon{
+          height: 38px;
+          width: 40px;
+          background-color: lightgrey;
+          position: absolute;
+          right: 0;
+          border-radius: 4px;
+        };
+      };
+    };
+
+    &__bottom{
+      height: 44px;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 8px;
+
+      &__li{
+        height: 44px;
+        display: flex;
+        justify-content: space-between;
+        width: 1020px;
+
+        .li-left{
+          height: 44px;
+          width: 300px;
+          display: flex;
+          .li-search{
+            font-weight: bold;
+            font-size: 14px;
+            height: 44px;
+            width: 150px;
+            display: flex;
+            align-items: center;
+            a{
+              text-decoration: none;
+              color: $black;
+            };
+          };
+        };
+
+        .li-right{
+          display: flex;
+          height: 44px;
+          width: 520px;
+
+          .h3{
+            font-size: 14px;
+            height: 44px;
+            width: 127px;
+            display: flex;
+            align-items: center;
+            a{
+              text-decoration: none;
+              color: $black;
+            };
+          };
+        };
+      };
+    };
+  };
+};

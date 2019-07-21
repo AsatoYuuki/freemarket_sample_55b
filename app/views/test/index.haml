@@ -1,1 +1,31 @@
-これがテスト用のビューです！
+.header
+  .header__box
+    .header__box__top
+      %h1
+        = link_to do
+          %img{src: asset_path('mercari_logo_horizontal.png'), height: 50, width: 165 }
+      .header__box__top__right
+        .header__box__top__right__search
+        .header__box__top__right__icon
+    .header__box__bottom
+      .header__box__bottom__li
+        %ul.li-left
+          %li.li-search
+            = link_to do
+              カテゴリーから探す
+          %li.li-search
+            = link_to do
+              ブランドから探す
+        %ul.li-right
+          %li.h3
+            = link_to do
+              いいね！一覧
+          %li.h3
+            = link_to do
+              お知らせ
+          %li.h3
+            = link_to do
+              やることリスト
+          %li.h3
+            = link_to do
+              マイページ
