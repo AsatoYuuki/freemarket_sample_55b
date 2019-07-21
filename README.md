@@ -57,17 +57,18 @@ Things you may want to cover:
 ## items table
 |Colmun|Type|Options|
 |------|----|-------|
-|name|text|null: false|
+|name|text|null: false, index: true|
 |content|text|null: false|
 |price|integer|null: false|
 |size|string||
 |condition|string|null: false|
 |send_tax|string|null: false|
-|send_method|string||
+|send_method|string|null: false|
 |send_place|string|null: false|
 |send_day|string|null: false|
+|buyer_id|integer||
 |user_id|integer|null: false, foreign_key: true|
-|bland_id|integer|null: false, foreign_key: true|
+|brand_id|integer|foreign_key: true|
 
 ## association
 - has_many :images
@@ -76,7 +77,7 @@ Things you may want to cover:
 - has_many :categories, through: :item_categories
 - has_many :item_categories
 - belongs_to :user
-- belongs_to: bland
+- belongs_to: brand
 
 
 ## item_categories table
@@ -93,7 +94,7 @@ Things you may want to cover:
 ## categories table
 |Colmun|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|name|string|null: false, index: true|
 
 ## association
 - has_many :item_categories
@@ -103,17 +104,17 @@ Things you may want to cover:
 ## images table
 |Colmun|Type|Options|
 |------|----|-------|
-|url|text|null: false|
+|url|string|null: false|
 |item_id|integer|null: false, foreign_key: true|
 
 ## association
 - belongs_to :item
 
 
-## bland table
+## brand table
 |Colmun|Type|Options|
 |------|----|-------|
-|name|string||
+|name|string|index: true|
 
 ## association
 - has_many :items
