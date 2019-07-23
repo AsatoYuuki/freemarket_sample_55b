@@ -1,1 +1,44 @@
-これがテスト用のビューです！
+.header
+  .header__box
+    .header__box__top
+      %h1
+        = link_to do
+          %img{src: asset_path('main-logo.png'), height: 52, width: 167 }
+      .header__box__top__right
+        .header__box__top__right__search
+          %input{type: "search", class: "search", placeholder: "何かお探しですか？" }
+        .header__box__top__right__icon
+          = link_to "", class: "search-icon-link" do
+            = fa_icon 'search', class: "search-icon"
+    .header__box__bottom
+      .header__box__bottom__li
+        %ul.li-left
+          %li.li-search
+            = fa_icon 'list-ul', class: "search-icon-left"
+            = link_to do
+              カテゴリーから探す
+          %li.li-search
+            = fa_icon 'tag', class: "search-icon-left"
+            = link_to do
+              ブランドから探す
+        %ul.li-right
+          %li.iine
+            = link_to "", class: "hover" do
+              = fa_icon 'heart', class: "search-icon-right"
+              %span
+                いいね！一覧
+          %li.message
+            = link_to "", class: "hover" do
+              = fa_icon 'bell', class: "search-icon-right"
+              お知らせ
+          %li.todo
+            = link_to "", class: "hover" do
+              = fa_icon 'check', class: "search-icon-right"
+              やることリスト
+          %li.mypage
+            %img{src: asset_path('avator.png'), height: 32, width: 32 }
+            = link_to do
+              マイページ
+
+
+.body-main-box
