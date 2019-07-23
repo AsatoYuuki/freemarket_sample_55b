@@ -1,0 +1,20 @@
+@import "variable.scss";
+.log-out-box{
+  background-color: $white;
+  height: 179px;
+  width:700px;
+  padding: 64px;
+  box-sizing: border-box;
+  &__button{
+  display: block;
+  width:500px;
+  height: 51px;
+  background-color: $red;
+  color: $white;
+  font-size: 14px;
+  text-align: center;
+  line-height: 3.5;
+  margin: auto;
+  text-decoration: none;
+ }
+}
