@@ -1,0 +1,65 @@
+.user-info
+  .user-info__title-box
+    %h2.user-info__title-box__title
+      本人情報の登録
+  .user-info__forms
+    .user-info__forms__nortifications
+      %p.user-info__forms__nortifications__message
+        お客様の本人情報をご登録ください
+        %br
+        登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
+      =link_to "本人確認書類のアップロードについて＞","",class: "user-info__forms__link"
+    .user-info__forms__info
+      %label.user-info__label
+        お名前
+      %p
+        仮置きネーム太郎
+    .user-info__forms__info
+      %label.user-info__label
+        お名前カナ
+      %p
+        カリオキネームフトロウ
+    .user-info__forms__info
+      %label.user-info__label
+        生年月日
+      %p
+        2000/2/22
+    .user-info__forms__form
+      .form-label
+        %label.user-info__label
+          郵便番号
+        .user-info__graybox
+          任意
+      %input.user-info__forms__input{placeholder: "例) 1234567"}
+    .user-info__forms__form
+      .form-label
+        %label.user-info__label
+          都道府県
+        .user-info__graybox
+          任意
+      %select.user-info__forms__input.user-info__forms__select
+    .user-info__forms__form
+      .form-label
+        %label.user-info__label
+          市区町村
+        %span.user-info__graybox
+          任意
+      %input.user-info__forms__input{placeholder: "例） 横浜市緑区"}
+    .user-info__forms__form
+      .form-label
+        %label.user-info__label
+          番地
+        %span.user-info__graybox
+          任意
+      %input.user-info__forms__input{placeholder: "例） 青山1-1-1"}
+    .user-info__forms__form
+      .form-label
+        %label.user-info__label
+          建物名
+        %span.user-info__graybox
+          任意
+      %input.user-info__forms__input{placeholder: "例） 柳ビル103"}
+    %button.user-info__forms__submit
+      登録する
+    .user-info__forms__text
+    =link_to "本人情報の登録について＞","",class: "user-info__forms__link"
