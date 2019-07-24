@@ -1,0 +1,18 @@
+.credit-card-comfirmation
+  .credit-card-comfirmation__title
+    支払い方法
+  .credit-card-comfirmation__box
+    .credit-card-comfirmation__box__top
+      .your-card
+        .your-card__index
+          クレジットカード一覧
+        .your-card__info
+          .your-card__info__icon
+            =image_tag "jcb.png",size: "25x25"
+            =link_to "削除する","",class: "your-card__info__remove"
+          .your-card__info__number
+            ***********************222karioki
+          .your-card__info__limit
+            03/22
+    .credit-card-comfirmation__box__bottom
+      =link_to "支払い方法について ＞","",class: "credit-card-comfirmation__box__link"

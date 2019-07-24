@@ -13,6 +13,17 @@
   box-sizing: border-box;
   border-bottom: 1px solid $pale_gray;
 }
+@mixin remove-botton{
+  height: 24px;
+  width: 70px;
+  box-sizing: border-box;
+  padding: 4px 6px;
+  font-size: 14px;
+  text-decoration: none;
+  color: $red;
+  border-radius: 3px;
+  border:1px solid $red;
+}
 @mixin form-icon($fColor){
   color:$white;
   background-color: $fColor;
