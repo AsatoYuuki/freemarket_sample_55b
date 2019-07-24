@@ -1,0 +1,34 @@
+.credit-card-resistration
+  .credit-card-resistration__title
+    クレジットカード情報入力
+  .credit-card-resistration__box
+    .card-information-box
+      .card-information-box__card-number
+        .label-require-icon
+          %label.card-information-box__label
+            カード番号
+          .card-information-box__require-icon
+            必須
+        %input.card-information-box__input{placeholder: "半角数字のみ"}
+        = image_tag("creditcards.png", class:"card-information-box__picture")
+      .card-information-box__expiration
+        .label-require-icon
+          %label.card-information-box__label
+            有効期限
+          .card-information-box__require-icon
+            必須
+        %select.card-information-box__select
+        %span.card-information-box__select__text
+          月
+        %select.card-information-box__select.card-information-box__select2
+        %span.card-information-box__select__text
+          年
+      .card-information-box__security
+        .label-require-icon
+          %label.card-information-box__label
+            セキュリティコード
+          .card-information-box__require-icon
+            必須
+        %input.card-information-box__input{placeholder: "カード背面4桁もしくは3桁の番号"}
+      %button.card-information-box__submit
+        追加する
