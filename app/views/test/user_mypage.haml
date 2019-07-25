@@ -1,0 +1,22 @@
+.wrapper#background
+  .container.clearfix
+    = render "side-list"
+    .right-content
+      %section.mypage-user-icon
+        %img.mypage-user-icon__image{src: "assets/avator.png", height: "70", width:"70"}/
+        -# = link_to '', ''
+        %h2.mypage-user-icon__name
+          メルメルさん
+        .mypage-number
+          .mypage-number__gedgement
+            評価
+            %span.mypage-number__gedgement__num
+              0
+          .mypage-number__number
+            出品数
+            %span.mypage-number__number__num
+              0
+      .todo-box
+        = render "mypage-todo"
+      .mypage-tab-box
+        = render "mypage-tab-container"
