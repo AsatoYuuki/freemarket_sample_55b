@@ -1,0 +1,40 @@
+%section.mypage-todo
+  %ul.mypage-todo__mypage
+    %li
+      %h3.mypage-todo__mypage__notice
+        お知らせ
+    %li
+      %h3.mypage-todo__mypage__todo-list
+        やることリスト
+  .tab-content
+    %ul#mypage-tab-notification
+      %li.mypage-tab-notification__link
+        %a.mypage-item-link
+          .mypage-item-link__text
+            事務局から個別のメッセージ「ログイン通知」
+          .mypage-item-link__time
+            %i.mypage-item-link__time__clock
+              = fa_icon 'clock-o',class:"clock"
+            %span.mypage-item-link__time__date
+              １日前
+        %i.angle-right
+          = fa_icon 'angle-right' ,class:"angle-right"
+
+        .icon
+          = image_tag "/assets/mercari_profile.png" , width:45, height:45
+      %li.mypage-tab-notification__link
+        %a.mypage-item-link
+          .mypage-item-link__text
+            《お買い物応援キャンペーン》
+          .mypage-item-link__time
+            %i.mypage-item-link__time__clock
+              = fa_icon 'clock-o' ,class:"clock "
+            %span.mypage-item-link__time__date
+              １日前
+        %i.angle-right
+          = fa_icon 'angle-right' ,class:"angle-right"
+        .icon
+          = image_tag "/assets/mercari_profile.png" , width:45, height:45
+      %li.mypage-go-list
+        %a.mypage-go-list__all
+          一覧を見る
