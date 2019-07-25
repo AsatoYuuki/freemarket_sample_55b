@@ -3,7 +3,8 @@
     = render "side-list"
     .right-content
       %section.mypage-user-icon
-        %img.mypage-user-icon__image{src: "assets/avator.png", height: "70", width:"70"}/
+        .mypage-user-icon__image
+          = image_tag "/assets/avator.png" , width:70, height:70, class:"image"
         -# = link_to '', ''
         %h2.mypage-user-icon__name
           メルメルさん
