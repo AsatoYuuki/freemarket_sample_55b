@@ -45,3 +45,11 @@
   background-size: 12px 10px;
   background-position: right 10px center;
 }
+@mixin submit-button($fSize,$fColor){
+  font-size: 14px;
+  height:50px;
+  width:$fSize;
+  color:$white;
+  background-color:$fColor;
+  text-align: center;
+}
