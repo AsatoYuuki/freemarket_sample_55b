@@ -1,6 +1,6 @@
 .wrapper#background
   .container.clearfix
-    = render "side-list"
+    = render "shared/side-list"
     .right-content
       %section.mypage-user-icon
         .mypage-user-icon__image
@@ -18,6 +18,6 @@
             %span.mypage-number__number__num
               0
       .todo-box
-        = render "mypage-todo"
+        = render "shared/mypage-todo"
       .mypage-tab-box
-        = render "mypage-tab-container"
+        = render "shared/mypage-tab-container"
