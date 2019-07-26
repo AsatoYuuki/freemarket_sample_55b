@@ -1,0 +1,11 @@
+.profile-edit
+  .profile-edit__title
+    プロフィール
+  .profile-edit__top-box
+    .profile-edit__top-box__container
+      = image_tag "/assets/avator.png", class:"profile-edit__top-box__avator"
+      %input.profile-edit__top-box__name{placeholder: "current_user.name"}
+  .profile-edit__under-box
+    .profile-edit__under-box__input
+      =  text_area :profile, :profile, class: "profile-edit__under-box__input__form",placeholder: "current_user.profile（空であれば定型文を記述してください）" 
+    = link_to "変更する", "" ,{class: "profile-edit__under-box__submit"}

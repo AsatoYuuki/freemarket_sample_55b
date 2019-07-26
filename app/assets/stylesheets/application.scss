@@ -14,9 +14,10 @@
  *= require_self
  */
 
+ @import "variable.scss";
  @import "font-awesome";
- @import 'reset';
- @import 'colors';
- @import 'index';
-
+ @import './reset.scss'; 
+ @import './side-list.scss';
+ @import './mypage-tab-container.scss';
+ @import './mypage-todo';
  
