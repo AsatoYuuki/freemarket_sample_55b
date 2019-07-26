@@ -73,7 +73,7 @@
       設定
     %ul.mypage-nav__list
       %li.side-bar
-        プロフィール
+        = link_to "プロフィール", mypage_profile_path
         %i.side-bar__angle-right
           = fa_icon 'angle-right' ,class:"angle-right fa-lg"
       %li.side-bar
@@ -81,7 +81,7 @@
         %i.side-bar__angle-right
           = fa_icon 'angle-right' ,class:"angle-right fa-lg"
       %li.side-bar
-        支払い方法変更
+        = link_to "支払い方法変更", mypage_card_path
         %i.side-bar__angle-right
           = fa_icon 'angle-right' ,class:"angle-right fa-lg"
       %li.side-bar
@@ -97,6 +97,6 @@
         %i.side-bar__angle-right
           = fa_icon 'angle-right' ,class:"angle-right fa-lg"
       %li.side-bar
-        ログアウト
+        = link_to "ログアウト", mypage_logout_path
         %i.side-bar__angle-right
-          = fa_icon 'angle-right' ,class:"angle-right fa-lg"
+        = fa_icon 'angle-right' ,class:"angle-right fa-lg"
