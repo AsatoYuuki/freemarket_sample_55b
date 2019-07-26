@@ -1,4 +1,5 @@
 @import "variable";
+@import "variable_icon";
 .wallpaper-hatakeyama{
   background-color: $background_gray;
   min-height: 100%;
@@ -139,11 +140,8 @@
       float: right;
       color: $light_blue;
       text-decoration: none;
-
     }
-  }
-  
-
+  }  
 }
 .message-box{
   width: 700px;
@@ -216,16 +214,16 @@
           color: $white;  
         }
         .facebook-button{
-          background-color: #385185;
+          background-color: $facebook_blue;
         }
         .twitter-button{
-          background-color: #5d9dc9;
+          background-color: $twitter_blue;
         }
         .line-button{
-          background-color: #00c137;
+          background-color: $line_green;
         }
         .pinterest-button{
-          background-color: #aa262a;
+          background-color: $pinterest_red;
         }
       }
     }
