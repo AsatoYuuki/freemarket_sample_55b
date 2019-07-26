@@ -1,209 +1,218 @@
-.wrap
-  .header
-    .header__box
-      .header__box__top
-        %h1.mercari-top-logo
+.toppage-header
+  .toppage-header__box
+    .toppage-header__box__top
+      %h1.mercari-top-logo
+        = link_to do
+          = image_tag 'main-logo.png', height: '52', width: '167'
+      .toppage-header__box__top__right
+        .toppage-header__box__top__right__search
+          %input{type: "search", class: "search", placeholder: "何かお探しですか？" }
+        .toppage-header__box__top__right__icon
+          = link_to "", class: "search-icon-link" do
+            = fa_icon 'search', class: "search-icon"
+    .toppage-header__box__bottom
+      .toppage-header__box__bottom__li
+        %ul.toppage-header__box__bottom__li__left
+          %li.toppage-header__box__bottom__li__left__li-search
+            = fa_icon 'list-ul', class: "search-icon-left"
+            = link_to "", class: "search-brand-category" do
+              カテゴリーから探す
+          %li.toppage-header__box__bottom__li__left__li-search
+            = fa_icon 'tag', class: "search-icon-left"
+            = link_to "", class: "search-brand-category" do
+              ブランドから探す
+
+        -# #ログインしている場合
+        %ul.toppage-header__box__bottom__li__right
+          %li.toppage-header__box__bottom__li__right__iine
+            = link_to "", class: "iine-message-todo" do
+              = fa_icon 'heart', class: "search-icon-right"
+              %span
+                いいね！一覧
+          %li.toppage-header__box__bottom__li__right__message
+            = link_to "", class: "iine-message-todo" do
+              = fa_icon 'bell', class: "search-icon-right"
+              お知らせ
+          %li.toppage-header__box__bottom__li__right__todo
+            = link_to "", class: "iine-message-todo" do
+              = fa_icon 'check', class: "search-icon-right"
+              やることリスト
+          %li.toppage-header__box__bottom__li__right__mypage
+            = image_tag 'avator.png', class: 'gotomypage-icon', height: '32', width: '32'
+            = link_to "", class: "gotomypage" do
+              マイページ
+
+        -# #ログインしていない場合
+        -# %ul.toppage-header__box__bottom__li__right2
+        -#   %li.toppage-header__box__bottom__li__right2__signup
+        -#     = link_to "", class: "toppage-header__box__bottom__li__right2__signup__icon" do
+        -#       新規会員登録
+        -#   %li.toppage-header__box__bottom__li__right2__login
+        -#     = link_to "", class: "toppage-header__box__bottom__li__right2__login__icon" do
+        -#       ログイン
+
+.toppage-main
+  .toppage-main__visual
+    = image_tag 'top_bg_camp.jpg', class: 'header__image__pic', height: '390', width: '100%'
+  %section.toppage-main__pickup-category
+    %h2.pickup-category-head
+      ピックアップカテゴリー
+    .pickup-category-items-box
+      %h3.pickup-category-items-box__genre-newitems
+        レディース新着アイテム
+      .item-box-contents
+        .item-box-contents__items-box
+          = link_to "", class: "item-box-contents__items-box__name" do
+            .item-box-contents__items-box__photo
+              = image_tag 'sample-sell-sweater.jpg', class: 'toppage-item-pic', height: '213', width: '213'
+            .item-box-contents__items-box__body
+              .item-box-contents__items-box__body__name
+                【美品】ニット　ライトブルー　セーター
+              .item-box-contents__items-box__body__number
+                .items-box-price
+                  ¥5,000
+                .items-box-heart
+                  .items-box-heart__icon
+                    = fa_icon 'heart', class: "search-icon-right"
+                  .items-box-heart__count
+                    2
+        .item-box-contents__items-box
+          = link_to "", class: "item-box-contents__items-box__name" do
+            .item-box-contents__items-box__photo
+              = image_tag 'sample-sell-sweater.jpg', class: 'toppage-item-pic', height: '213', width: '213'
+            .item-box-contents__items-box__body
+              .item-box-contents__items-box__body__name
+                【美品】ニット　ライトブルー　セーター
+              .item-box-contents__items-box__body__number
+                .items-box-price
+                  ¥5,000
+                .items-box-heart
+                  .items-box-heart__icon
+                    = fa_icon 'heart', class: "search-icon-right"
+                  .items-box-heart__count
+                    2
+        .item-box-contents__items-box
+          = link_to "", class: "item-box-contents__items-box__name" do
+            .item-box-contents__items-box__photo
+              = image_tag 'sample-sell-sweater.jpg', class: 'toppage-item-pic', height: '213', width: '213'
+            .item-box-contents__items-box__body
+              .item-box-contents__items-box__body__name
+                【美品】ニット　ライトブルー　セーター
+              .item-box-contents__items-box__body__number
+                .items-box-price
+                  ¥5,000
+                .items-box-heart
+                  .items-box-heart__icon
+                    = fa_icon 'heart', class: "search-icon-right"
+                  .items-box-heart__count
+                    2
+        .item-box-contents__items-box
+          = link_to "", class: "item-box-contents__items-box__name" do
+            .item-box-contents__items-box__photo
+              = image_tag 'sample-sell-sweater.jpg', class: 'toppage-item-pic', height: '213', width: '213'
+            .item-box-contents__items-box__body
+              .item-box-contents__items-box__body__name
+                【美品】ニット　ライトブルー　セーター
+              .item-box-contents__items-box__body__number
+                .items-box-price
+                  ¥5,000
+                .items-box-heart
+                  .items-box-heart__icon
+                    = fa_icon 'heart', class: "search-icon-right"
+                  .items-box-heart__count
+                    2
+      .item-box-contents__view-all
+        すべての商品を見る
+
+.toppage-footer__image
+  = image_tag 'mercari__footer.jpg', class: 'footer__image__pic', height: '260', width: '100%'
+
+.toppage-footer__box
+  .toppage-footer__box__top
+    .toppage-footer__box__top__footer-list
+      %h2.toppage-footer__box__top__footer-list__footer-title
+        メルカリについて
+      %ul.toppage-footer__box__top__footer-list__information-list
+        = link_to "", class: "toppage-information" do
+          会社概要（運営会社）
+        = link_to "", class: "toppage-information" do
+          採用情報
+        = link_to "", class: "toppage-information" do
+          プレスリリース
+        = link_to "", class: "toppage-information" do
+          公式ブログ
+        = link_to "", class: "toppage-information" do
+          メルカリロゴ利用ガイドライン
+
+      .toppage-footer-sns-link
+        .toppage-footer-sns-link__icon
           = link_to do
-            %img{src: asset_path('main-logo.png'), height: 52, width: 167 }
-        .header__box__top__right
-          .header__box__top__right__search
-            %input{type: "search", class: "search", placeholder: "何かお探しですか？" }
-          .header__box__top__right__icon
-            = link_to "", class: "search-icon-link" do
-              = fa_icon 'search', class: "search-icon"
-      .header__box__bottom
-        .header__box__bottom__li
-          %ul.header__box__bottom__li__left
-            %li.header__box__bottom__li__left__li-search
-              = fa_icon 'list-ul', class: "search-icon-left"
-              = link_to "", class: "search-brand-category" do
-                カテゴリーから探す
-            %li.header__box__bottom__li__left__li-search
-              = fa_icon 'tag', class: "search-icon-left"
-              = link_to "", class: "search-brand-category" do
-                ブランドから探す
+            = fa_icon 'twitter', class: "sns-link-icon"
+        .toppage-footer-sns-link__icon
+          = link_to do
+            = fa_icon 'facebook', class: "sns-link-icon"
 
-          %ul.header__box__bottom__li__right
-          -# #ユーザーログイン時はこちらを表示
-            -# %li.header__box__bottom__li__right__iine
-            -#   = link_to "", class: "iine-message-todo" do
-            -#     = fa_icon 'heart', class: "search-icon-right"
-            -#     %span
-            -#       いいね！一覧
-            -# %li.header__box__bottom__li__right__message
-            -#   = link_to "", class: "iine-message-todo" do
-            -#     = fa_icon 'bell', class: "search-icon-right"
-            -#     お知らせ
-            -# %li.header__box__bottom__li__right__todo
-            -#   = link_to "", class: "iine-message-todo" do
-            -#     = fa_icon 'check', class: "search-icon-right"
-            -#     やることリスト
-            -# %li.header__box__bottom__li__right__mypage
-            -#   %img{src: asset_path('avator.png'), class: "gotomypage-icon", height: 32, width: 32 }
-            -#   = link_to "", class: "gotomypage" do
-            -#     マイページ
+    .toppage-footer__box__top__footer-list
+      %h2.toppage-footer__box__top__footer-list__footer-title
+        ヘルプ&ガイド
+      %ul.toppage-footer__box__top__footer-list__information-list
+        = link_to "", class: "toppage-information" do
+          メルカリガイド
+        = link_to "", class: "toppage-information" do
+          らくらくメルカリ便
+        = link_to "", class: "toppage-information" do
+          ゆうゆうメルカリ便
+        = link_to "", class: "toppage-information" do
+          大型メルカリ便
+        = link_to "", class: "toppage-information" do
+          車体取引ガイド
+        = link_to "", class: "toppage-information" do
+          メルカリあんしん・あんぜん宣言！
+        = link_to "", class: "toppage-information" do
+          偽ブランド品撲滅への取り組み
+        = link_to "", class: "toppage-information" do
+          メルカリボックス
 
-          -# = link_to "", class: "header__box__bottom__li__right__signup"
-          -#   新規会員登録
-          -# = link_to "", class: "header__box__bottom__li__right__user__login"
-          -#   ログイン
+    .toppage-footer-list-box
+      .toppage-footer-list-box__title-privacy-policy
+        プライバシーと利用規約
+      %ul.toppage-footer-list-box__informationlist2
+        %li.sns-link-icon-information
+          = link_to "", class: "toppage-information2" do
+            プライバシーポリシー
+          = link_to "", class: "toppage-information2" do
+            メルカリ利用規約
+          = link_to "", class: "toppage-information2" do
+            あんしんスマートサポート制度に関する利用特約
+          = link_to "", class: "toppage-information2" do
+            コンプライアンスポリシー
+        %li.sns-link-icon-information
+          = link_to "", class: "toppage-information2" do
+            個人データの安全管理に係る基本方針
+          = link_to "", class: "toppage-information2" do
+            特定商取引に関する表記
+          = link_to "", class: "toppage-information2" do
+            資金決済法に基づく表示
+          = link_to "", class: "toppage-information2" do
+            法令遵守と犯罪防止のために
 
-  .toppage-main
-    .toppage-main__visual
-      = image_tag 'top_bg_camp.jpg', class: 'header__image__pic', height: '390', width: '100%'
-    %section.toppage-main__pickup-category
-      %h2.pickup-category__head
-        ピックアップカテゴリー
-      .pickup-category__items-box
-        %h3.pickup-category__items-box__genre-newitems
-          レディース新着アイテム
-        .item-box-contents
-          .item-box-contents__items-box
-            = link_to root_path do
-              .item-box-contents__items-box__photo
-                = image_tag 'sample-sell-sweater.jpg', class: 'toppage-item-pic', height: '213', width: '213'
-              .item-box-contents__items-box__body
-                .item-box-contents__items-box__body__name
-                  【美品】ニット　ライトブルー　セーター
-                .item-box-contents__items-box__body__number
-                  .items-box-price
-                    ¥5,000
-                  .items-box-heart
-                    .items-box-heart__icon
-                      = fa_icon 'heart', class: "search-icon-right"
-                    .items-box-heart__count
-                      2
-          .item-box-contents__items-box
-            = link_to root_path do
-              .item-box-contents__items-box__photo
-                = image_tag 'sample-sell-sweater.jpg', class: 'toppage-item-pic', height: '213', width: '213'
-              .item-box-contents__items-box__body
-                .item-box-contents__items-box__body__name
-                  【美品】ニット　ライトブルー　セーター
-                .item-box-contents__items-box__body__number
-                  .items-box-price
-                    ¥5,000
-                  .items-box-heart
-                    .items-box-heart__icon
-                      = fa_icon 'heart', class: "search-icon-right"
-                    .items-box-heart__count
-                      2
-          .item-box-contents__items-box
-            = link_to root_path do
-              .item-box-contents__items-box__photo
-                = image_tag 'sample-sell-sweater.jpg', class: 'toppage-item-pic', height: '213', width: '213'
-              .item-box-contents__items-box__body
-                .item-box-contents__items-box__body__name
-                  【美品】ニット　ライトブルー　セーター
-                .item-box-contents__items-box__body__number
-                  .items-box-price
-                    ¥5,000
-                  .items-box-heart
-                    .items-box-heart__icon
-                      = fa_icon 'heart', class: "search-icon-right"
-                    .items-box-heart__count
-                      2
-          .item-box-contents__items-box
-            = link_to root_path do
-              .item-box-contents__items-box__photo
-                = image_tag 'sample-sell-sweater.jpg', class: 'toppage-item-pic', height: '213', width: '213'
-              .item-box-contents__items-box__body
-                .item-box-contents__items-box__body__name
-                  【美品】ニット　ライトブルー　セーター
-                .item-box-contents__items-box__body__number
-                  .items-box-price
-                    ¥5,000
-                  .items-box-heart
-                    .items-box-heart__icon
-                      = fa_icon 'heart', class: "search-icon-right"
-                    .items-box-heart__count
-                      2
-        .item-box-contents__view-all
-          すべての商品を見る
+    .toppage-footer__box__top__footer-list
+      %h2.toppage-footer__box__top__footer-list__footer-title
+        国
+      %ul.toppage-footer__box__top__footer-list__information-list
+        = link_to "", class: "toppage-information" do
+          日本
+        = link_to "", class: "toppage-information" do 
+          United States
+      
+  .toppage-footer__box__bottom
+    .toppage-footer__box__bottom__mercari-logo
+      = image_tag 'logo-white.png', class: 'footer__white__logo', height: '33', width: '124'
+    %span.toppage-footer__box__bottom__copyright
+      ©️ 2019 Mercari
 
-  .footer__image
-    = image_tag 'mercari__footer.jpg', class: 'footer__image__pic', height: '260', width: '100%'
-
-  .footer__box
-    .footer__box__top
-      .footer__box__top__footer-list
-        %h2.footer__box__top__footer-list__footer-title
-          メルカリについて
-        %ul.footer__box__top__footer-list__information-list
-          = link_to "", class: "toppage-information" do
-            会社概要（運営会社）
-          = link_to "", class: "toppage-information" do
-            採用情報
-          = link_to "", class: "toppage-information" do
-            プレスリリース
-          = link_to "", class: "toppage-information" do
-            公式ブログ
-          = link_to "", class: "toppage-information" do
-            メルカリロゴ利用ガイドライン
-
-        .footer-sns-link
-          .footer-sns-link__icon
-            = link_to do
-              = fa_icon 'twitter', class: "sns-link-icon"
-          .footer-sns-link__icon
-            = link_to do
-              = fa_icon 'facebook', class: "sns-link-icon"
-
-      .footer__box__top__footer-list
-        %h2.footer__box__top__footer-list__footer-title
-          ヘルプ&ガイド
-        %ul.footer__box__top__footer-list__information-list
-          = link_to "", class: "toppage-information" do
-            メルカリガイド
-          = link_to "", class: "toppage-information" do
-            らくらくメルカリ便
-          = link_to "", class: "toppage-information" do
-            ゆうゆうメルカリ便
-          = link_to "", class: "toppage-information" do
-            大型メルカリ便
-          = link_to "", class: "toppage-information" do
-            車体取引ガイド
-          = link_to "", class: "toppage-information" do
-            メルカリあんしん・あんぜん宣言！
-          = link_to "", class: "toppage-information" do
-            偽ブランド品撲滅への取り組み
-          = link_to "", class: "toppage-information" do
-            メルカリボックス
-
-      .footer-list-box
-        .footer-list-box__title-privacy-policy
-          プライバシーと利用規約
-        %ul.footer-list-box__informationlist2
-          %li.sns-link-icon-information
-            = link_to "", class: "toppage-information2" do
-              プライバシーポリシー
-            = link_to "", class: "toppage-information2" do
-              メルカリ利用規約
-            = link_to "", class: "toppage-information2" do
-              あんしんスマートサポート制度に関する利用特約
-            = link_to "", class: "toppage-information2" do
-              コンプライアンスポリシー
-          %li.sns-link-icon-information
-            = link_to "", class: "toppage-information2" do
-              個人データの安全管理に係る基本方針
-            = link_to "", class: "toppage-information2" do
-              特定商取引に関する表記
-            = link_to "", class: "toppage-information2" do
-              資金決済法に基づく表示
-            = link_to "", class: "toppage-information2" do
-              法令遵守と犯罪防止のために
-
-      .footer__box__top__footer-list
-        %h2.footer__box__top__footer-list__footer-title
-          国
-        %ul.footer__box__top__footer-list__information-list
-          = link_to "", class: "toppage-information" do
-            日本
-          = link_to "", class: "toppage-information" do 
-            United States
-        
-    .footer__box__bottom
-      .footer__box__bottom__mercari-logo
-        = image_tag 'logo-white.png', class: 'footer__white__logo', height: '33', width: '124'
-      %span.footer__box__bottom__copyright
-        ©️ 2019 Mercari
+= link_to "", class: "red-camera" do
+  .footer-sell-btn
+    .footer-sell-btn__camera
+      出品
+      = fa_icon 'camera', class: "fa-3x footer-sell-btn__link__camera" 
