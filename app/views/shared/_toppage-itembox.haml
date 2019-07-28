@@ -1,0 +1,15 @@
+.item-box-contents__items-box
+  = link_to "", class: "item-box-contents__items-box__name" do
+    .item-box-contents__items-box__photo
+      = image_tag 'sample-sell-sweater.jpg', class: 'toppage-item-pic', height: '213', width: '213'
+    .item-box-contents__items-box__body
+      .item-box-contents__items-box__body__name
+        【美品】ニット　ライトブルー　セーター
+      .item-box-contents__items-box__body__number
+        .items-box-price
+          ¥5,000
+        .items-box-heart
+          .items-box-heart__icon
+            = fa_icon 'heart', class: "search-icon-right"
+          .items-box-heart__count
+            2
