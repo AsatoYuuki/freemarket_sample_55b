@@ -77,3 +77,4 @@ group :development, :test do
 end
 
 gem 'ancestry'
+gem 'devise'
