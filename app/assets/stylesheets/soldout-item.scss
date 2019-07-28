@@ -1,0 +1,45 @@
+@import 'variable';
+@import 'mixin';
+
+.container{
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  background-color: $background_gray;
+  height: 100%;
+  width: 100%;
+  .content-main{
+    padding: 0 0 220px;
+    &__container{
+      width: 700px;
+      margin: 0 auto;
+      background-color: $white;
+
+      &__head{
+        padding: 16px;
+        border-bottom: solid 1px $background_gray;
+        font-size: 22px;
+        line-height: 1.5;
+        text-align: center;
+        font-weight: bold;
+        color: $black;
+      }
+
+      .buy-content{
+        padding: 24px 12.5% 40px;
+        margin: 0;
+
+        .content-text{
+          max-width: 320px;
+          margin: 0 auto;
+          font-size: 14px;
+          
+          &__link{
+            text-decoration: none;
+            color: $light_blue;
+          }
+        }
+      }
+    }
+  }
+}
+
+ 
