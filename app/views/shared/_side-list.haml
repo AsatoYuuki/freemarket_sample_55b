@@ -1,102 +1,75 @@
 .side-list
   %nav.mypage-nav
     %ul.mypage-nav__list
-      %li.side-bar
-        マイページ
-        %i.side-bar__angle-right
-          = fa_icon 'angle-right' ,class:"angle-right fa-lg"
-      %li.side-bar
-        お知らせ
-        %i.side-bar__angle-right
-          = fa_icon 'angle-right' ,class:"angle-right fa-lg"
-      %li.side-bar
-        やることリスト
-        %i.side-bar__angle-right
-          = fa_icon 'angle-right' ,class:"angle-right fa-lg"
-      %li.side-bar
-        いいね！一覧
-        %i.side-bar__angle-right
-          = fa_icon 'angle-right' ,class:"angle-right fa-lg"
-      %li.side-bar
-        出品する
-        %i.side-bar__angle-right
-          = fa_icon 'angle-right' ,class:"angle-right fa-lg"
-      %li.side-bar
-        出品した商品 - 出品中
-        %i.side-bar__angle-right
-          = fa_icon 'angle-right' ,class:"angle-right fa-lg"
-      %li.side-bar
-        出品した商品 - 取引中
-        %i.side-bar__angle-right
-          = fa_icon 'angle-right' ,class:"angle-right fa-lg"
-      %li.side-bar
-        出品した商品 - 売却済
-        %i.side-bar__angle-right
-          = fa_icon 'angle-right' ,class:"angle-right fa-lg"
-      %li.side-bar
-        購入した商品 - 取引中
-        %i.side-bar__angle-right
-          = fa_icon 'angle-right' ,class:"angle-right fa-lg"
-      %li.side-bar
-        購入した商品 - 過去の取引
-        %i.side-bar__angle-right
-          = fa_icon 'angle-right' ,class:"angle-right fa-lg"
-      %li.side-bar
-        ニュース一覧
-        %i.side-bar__angle-right
-          = fa_icon 'angle-right' ,class:"angle-right fa-lg"
-      %li.side-bar
-        評価一覧
-        %i.side-bar__angle-right
-          = fa_icon 'angle-right' ,class:"angle-right fa-lg"
-      %li.side-bar
-        ガイド
-        %i.side-bar__angle-right
-          = fa_icon 'angle-right' ,class:"angle-right fa-lg"
-      %li.side-bar
-        お問い合わせ
-        %i.side-bar__angle-right
-          = fa_icon 'angle-right' ,class:"angle-right fa-lg"
-
+      %li.side-bar__link-box
+        = link_to "マイページ", "", class:"side-links side-bar"
+        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+      %li.side-bar__link-box
+        = link_to "お知らせ", "", class:"side-links side-bar"
+        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+      %li.side-bar__link-box
+        = link_to "やることリスト", "", class:"side-links side-bar"
+        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+      %li.side-bar__link-box
+        = link_to "いいね！一覧", "", class:"side-links side-bar"
+        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+      %li.side-bar__link-box
+        = link_to "出品する", mypage_profile_path, class:"side-links side-bar"
+        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+      %li.side-bar__link-box
+        = link_to "出品した商品 - 出品中", "", class:"side-links side-bar"
+        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+      %li.side-bar__link-box
+        = link_to "出品した商品 - 取引中", "", class:"side-links side-bar"
+        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+      %li.side-bar__link-box
+        = link_to "出品した商品 - 売却済", "", class:"side-links side-bar"
+        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+      %li.side-bar__link-box
+        = link_to "購入した商品 - 過去の取引", "", class:"side-links side-bar"
+        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+      %li.side-bar__link-box
+        = link_to "ニュース一覧", "", class:"side-links side-bar"
+        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+      %li.side-bar__link-box
+        = link_to "評価一覧", "", class:"side-links side-bar"
+        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+      %li.side-bar__link-box
+        = link_to "ガイド", "", class:"side-links side-bar"
+        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+      %li.side-bar__link-box
+        = link_to "お問い合わせ", "", class:"side-links side-bar"
+        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
     %h3.mypage-nav__head
       メルペイ
     %ul.mypage-nav__list
-      %li.side-bar
-        売り上げ・振込申請
-        %i.side-bar__angle-right
-          = fa_icon 'angle-right' ,class:"angle-right fa-lg"
-      %li.side-bar
-        ポイント
-        %i.side-bar__angle-right
-          = fa_icon 'angle-right' ,class:"angle-right fa-lg"
+      %li.side-bar__link-box
+        = link_to "売り上げ・振り込み申請", "", class:"side-links side-bar"
+        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+      %li.side-bar__link-box
+        = link_to "ポイント", "", class:"side-links side-bar"
+        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
     %h3.mypage-nav__head
       設定
     %ul.mypage-nav__list
-      %li.side-bar
-        = link_to "プロフィール", mypage_profile_path
-        %i.side-bar__angle-right
-          = fa_icon 'angle-right' ,class:"angle-right fa-lg"
-      %li.side-bar
-        発送元・お届け先住所変更
-        %i.side-bar__angle-right
-          = fa_icon 'angle-right' ,class:"angle-right fa-lg"
-      %li.side-bar
-        = link_to "支払い方法変更", mypage_card_path
-        %i.side-bar__angle-right
-          = fa_icon 'angle-right' ,class:"angle-right fa-lg"
-      %li.side-bar
-        メール/パスワード
-        %i.side-bar__angle-right
-          = fa_icon 'angle-right' ,class:"angle-right fa-lg"
-      %li.side-bar
-        本人情報
-        %i.side-bar__angle-right
-          = fa_icon 'angle-right' ,class:"angle-right fa-lg"
-      %li.side-bar
-        電話番号の確認
-        %i.side-bar__angle-right
-          = fa_icon 'angle-right' ,class:"angle-right fa-lg"
-      %li.side-bar
-        = link_to "ログアウト", mypage_logout_path
-        %i.side-bar__angle-right
-        = fa_icon 'angle-right' ,class:"angle-right fa-lg"
+      %li.side-bar__link-box
+        = link_to "プロフィール", mypage_profile_path, class:"side-links side-bar"
+        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+      %li.side-bar__link-box
+        = link_to "発送元・お届け先住所変更", "", class:"side-links side-bar"
+        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+      %li.side-bar__link-box
+        = link_to "支払い方法変更", mypage_card_path, class:"side-links side-bar"
+        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+      %li.side-bar__link-box
+        = link_to "メール/パスワード", "", class:"side-links side-bar"
+        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+      %li.side-bar__link-box
+        = link_to "本人情報", "", class:"side-links side-bar"
+        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+      %li.side-bar__link-box
+        = link_to "電話番号の確認", "", class:"side-links side-bar"
+        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+      %li.side-bar__link-box
+        = link_to "ログアウト", mypage_logout_path, class:"side-links side-bar"
+        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
