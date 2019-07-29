@@ -1,6 +1,25 @@
+.top-header
+  = render "shared/header"
+%nav.second-header
+  %ul.second-header__box
+    %li.second-header__box__left
+      = link_to "メルカリ",root_path, class:"left-header" 
+      = fa_icon 'angle-right' ,class:"right-angle fa-lg"
+      .center-header
+        = link_to "マイページ",mypage_path, class:"center-header"
+        = fa_icon 'angle-right' ,class:"right-angle fa-lg"
+      .center-header
+        = link_to "支払い方法", , class:"center-header"
+        = fa_icon 'angle-right' ,class:"right-angle fa-lg"
+      .right-header
+        クレジットカード情報入力
 .wrapper#background
   .container.clearfix
     = render "shared/side-list"
     .right-content
       .right-content__main-box
         = render "shared/credit_info"
+.toppage-footer__image
+  = image_tag 'mercari__footer.jpg', class: 'footer__image__pic', height: '260', width: '100%'
+.last-footer
+  = render "shared/footer"
