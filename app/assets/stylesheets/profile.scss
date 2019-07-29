@@ -1,6 +1,19 @@
 @import"variable.scss";
 @import"mixin.scss";
 
+.center-header{
+  display: inline-block;
+  font-size: 14px;
+  margin-left: 0;
+  text-decoration: none;
+  color: $black;
+
+  &:hover{
+    color: $button-gray;
+    text-decoration: underline;
+  }
+}
+
 .profile-edit{
   @include box(565px);
   &__title{

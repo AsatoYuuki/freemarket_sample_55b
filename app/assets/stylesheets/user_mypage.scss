@@ -23,6 +23,11 @@
         text-decoration: none;
         color: $black;
         margin-left: 25px;
+
+        &:hover{
+          color: $button-gray;
+          text-decoration: underline;
+        }
       }
       .right-angle{
         margin: 0 8px;
@@ -36,7 +41,6 @@
         font-size: 14px;
       }
     }
-    
   }
 
   #backside{
