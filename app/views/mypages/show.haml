@@ -1,23 +1,37 @@
-.wrapper#background
-  .container.clearfix
-    = render "shared/side-list"
-    .right-content
-      %section.mypage-user-icon
-        .mypage-user-icon__image
-          = image_tag "avator.png" , width:70, height:70, class:"image"
-        -# = link_to '', ''
-        %h2.mypage-user-icon__name
-          メルメルさん
-        .mypage-number
-          .mypage-number__gedgement
-            評価
-            %span.mypage-number__gedgement__num
-              0
-          .mypage-number__number
-            出品数
-            %span.mypage-number__number__num
-              0
-      .todo-box
-        = render "shared/mypage-todo"
-      .mypage-tab-box
-        = render "shared/mypage-tab-container"
+.top-header
+  = render "shared/header"
+%nav.second-header
+  %ul.second-header__box
+    %li.second-header__box__left
+      = link_to "メルカリ",root_path, class:"left-header" 
+      = fa_icon 'angle-right' ,class:"right-angle fa-lg"
+      .right-header
+        マイページ
+  .wrapper#backside
+    .container.clearfix
+      = render "shared/side-list"
+      .right-content
+        %section.mypage-user-icon
+          .mypage-user-icon__image
+            = image_tag "avator.png" , width:70, height:70, class:"image"
+          -# = link_to '', ''  後からpathを入れる
+          %h2.mypage-user-icon__name
+            メルメルさん
+          .mypage-number
+            .mypage-number__gedgement
+              評価
+              %span.mypage-number__gedgement__num
+                0
+            .mypage-number__number
+              出品数
+              %span.mypage-number__number__num
+                0
+        .todo-box
+          = render "shared/mypage-todo"
+        .mypage-tab-box
+          = render "shared/mypage-tab-container"
+.toppage-footer__image
+  = image_tag 'mercari__footer.jpg', class: 'footer__image__pic', height: '260', width: '100%'
+.last-footer
+  = render "shared/footer"
+        
