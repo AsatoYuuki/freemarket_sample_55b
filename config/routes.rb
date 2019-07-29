@@ -5,5 +5,4 @@ Rails.application.routes.draw do
     resource :card ,only: [:show,:create] 
     resource :logout ,only: [:show]
   end
-  resources :items, only: [:show]
 end
