@@ -1,5 +1,38 @@
 .login-body
-  .login-body__container
+  .login-body__container-2
+    .login-body__container__header
+      %h1.login-body__container__header__h1 
+        = image_tag "main-logo.png" , width: 240, height:70
+      .progress-bar-contents
+        .progress-bar
+          .progress-bar__text
+            会員登録
+          .progress-bar__dot.dot-bars1
+            ●
+            .progress-bar__dot__bars.dot-bar1
+        .progress-bar
+          .progress-bar__text
+            電話番号認証
+          .progress-bar__dot.dot-bars2
+            ●
+            .progress-bar__dot__bars.dot-bars2
+        .progress-bar
+          .progress-bar__text
+            お届け先住所入力
+          .progress-bar__dot.dot-bar3
+            ●
+            .progress-bar__dot__bars.dot-bars3
+        .progress-bar
+          .progress-bar__text
+            支払い方法
+          .progress-bar__dot.dot-bar4
+            ●
+            .progress-bar__dot__bars.dot-bars4
+        .progress-bar
+          .progress-bar__text
+            完了
+          .progress-bar__dot.dot-bars5
+            ●
     .phone-main
       .phone-main__box
         .phone-main__box__text
@@ -19,4 +52,4 @@
             .text-right
               = link_to "電話番号の確認が必要な理由" , "" , class: "text-right__link" 
               = fa_icon "angle-right" , class: "angle-right-icon fa-lg"
-            
+    = render "shared/footer-log"

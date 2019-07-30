@@ -1,88 +1,124 @@
-.kaiin-body
-  .kaiin-body__main
-    .kaiin-body__main__box
-      %h2.kaiin-body__main__box__h2
-        会員情報入力
-      .kaiin-body__main__box__inner
-        .kaiin-body__main__box__inner__contents
-          .kaiin-body__main__box__inner__contents__form-box
-            %label.kaiin-body__main__box__inner__contents__form-box__nick-name
-              ニックネーム
-            %span.kaiin-body__main__box__inner__contents__form-box__hissu
-              必須
-            %input.kaiin-body__main__box__inner__contents__form-box__input-box{placeholder: "例) メルカリ太郎"}
-          .kaiin-body__main__box__inner__contents__form-box2-8
-            %label.kaiin-body__main__box__inner__contents__form-box__e-mail 
-              メールアドレス
-            %span.kaiin-body__main__box__inner__contents__form-box__hissu
-              必須
-            %input.kaiin-body__main__box__inner__contents__form-box__input-box{placeholder: "PC・携帯どちらでも可"}
-          .kaiin-body__main__box__inner__contents__form-box2-8
-            %label.kaiin-body__main__box__inner__contents__form-box__password
-              パスワード
-            %span.kaiin-body__main__box__inner__contents__form-box__hissu
-              必須
-            %input.kaiin-body__main__box__inner__contents__form-box__input-box{placeholder: "6文字以上"}
-          .kaiin-body__main__box__inner__contents__form-box2-8
-            %label.kaiin-body__main__box__inner__contents__form-box__password-confirmation
-              パスワード（確認）
-            %span.kaiin-body__main__box__inner__contents__form-box__hissu
-              必須
-            %input.kaiin-body__main__box__inner__contents__form-box__input-box{placeholder: "6文字以上"}
-          .kaiin-body__main__box__inner__contents__form-box2-8
-            %h3.kaiin-body__main__box__inner__contents__form-box2-8__h3
-              本人確認
-            %p.kaiin-body__main__box__inner__contents__form-box2-8__h3__honbun
-              安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
-          .kaiin-body__main__box__inner__contents__form-box2-8
-            %label.kaiin-body__main__box__inner__contents__form-box__full-name
-              お名前（全角）
-            %span.kaiin-body__main__box__inner__contents__form-box__hissu
-              必須
-            .kaiin-body__main__box__inner__contents__form-box2-8__doublebox
-              %input.kaiin-body__main__box__inner__contents__form-box2-8__doublebox__input-box2{placeholder: "例）山田"}
-              %input.kaiin-body__main__box__inner__contents__form-box2-8__doublebox__input-box2{placeholder: "例）太郎"}
-          .kaiin-body__main__box__inner__contents__form-box2-8
-            %label.kaiin-body__main__box__inner__contents__form-box__full-kana-name
-              お名前カナ（全角）
-            %span.kaiin-body__main__box__inner__contents__form-box__hissu
-              必須
-            .kaiin-body__main__box__inner__contents__form-box2-8__doublebox
-              %input.kaiin-body__main__box__inner__contents__form-box2-8__doublebox__input-box2{placeholder: "例）ヤマダ"}
-              %input.kaiin-body__main__box__inner__contents__form-box2-8__doublebox__input-box2{placeholder: "例）タロウ"}
-          .kaiin-body__main__box__inner__contents__form-box2-8
-            %label.kaiin-body__main__box__inner__contents__form-box__birthday
-              生年月日
-            %span.kaiin-body__main__box__inner__contents__form-box__hissu
-              必須
-            .kaiin-body__main__box__inner__contents__form-box2-8__doublebox
-              .kaiin-body__main__box__inner__contents__form-box2-8__doublebox__select
-                = fa_icon "angle-down" , class: "angle-down"
-                %select.kaiin-body__main__box__inner__contents__form-box2-8__doublebox__select__down-box 
-                %span.kaiin-body__main__box__inner__contents__form-box2-8__doublebox__select__text 年
-              .kaiin-body__main__box__inner__contents__form-box2-8__doublebox__select
-                = fa_icon "angle-down" , class: "angle-down"
-                %select.kaiin-body__main__box__inner__contents__form-box2-8__doublebox__select__down-box
-                %span.kaiin-body__main__box__inner__contents__form-box2-8__doublebox__select__text 月
-              .kaiin-body__main__box__inner__contents__form-box2-8__doublebox__select
-                = fa_icon "angle-down" , class: "angle-down"
-                %select.kaiin-body__main__box__inner__contents__form-box2-8__doublebox__select__down-box
-                %span.kaiin-body__main__box__inner__contents__form-box2-8__doublebox__select__text 日
-          .kaiin-body__main__box__inner__contents__text-info
-            ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
-        .kaiin-body__main__box__inner__contents
-          .kaiin-body__main__box__inner__contents__robot
-            %select.kaiin-body__main__box__inner__contents__robot__box
-              私はロボットではありませんよ。
-          .kaiin-body__main__box__inner__contents__form-box2-8
-            %p.kaiin-body__main__box__inner__contents__form-box2-8__text
-              「次へ進む」のボタンを押すことにより,
-            = link_to '利用規約', '' , class: 'kiyaku' 
-            %p.kaiin-body__main__box__inner__contents__form-box2-8__text
-              に同意したものとします。
-          %submit.kaiin-body__main__box__inner__contents__btm
-            次へ進む
-          .kaiin-body__main__box__inner__contents__touroku-information
-            %p.kaiin-body__main__box__inner__contents__touroku-information__text-box
-              = link_to '本人情報の登録について', '' , class: 'kiyaku' 
-              = fa_icon "angle-right" , class: "angle-right-icon"
+.login-body
+  .login-body__container-2
+    .login-body__container__header
+      %h1.login-body__container__header__h1 
+        = image_tag "main-logo.png" , width: 240, height:70
+      .progress-bar-contents
+        .progress-bar
+          .progress-bar__text
+            会員登録
+          .progress-bar__dot.dot-bars1
+            ●
+            .progress-bar__dot__bars.dot-bar1
+        .progress-bar
+          .progress-bar__text
+            電話番号認証
+          .progress-bar__dot.dot-bars2
+            ●
+            .progress-bar__dot__bars.dot-bars2
+        .progress-bar
+          .progress-bar__text
+            お届け先住所入力
+          .progress-bar__dot.dot-bar3
+            ●
+            .progress-bar__dot__bars.dot-bars3
+        .progress-bar
+          .progress-bar__text
+            支払い方法
+          .progress-bar__dot.dot-bar4
+            ●
+            .progress-bar__dot__bars.dot-bars4
+        .progress-bar
+          .progress-bar__text
+            完了
+          .progress-bar__dot.dot-bars5
+            ●
+    .kaiin-body
+      .kaiin-body__main
+        .kaiin-body__main__box
+          %h2.kaiin-body__main__box__h2
+            会員情報入力
+          .kaiin-body__main__box__inner
+            .kaiin-body__main__box__inner__contents
+              .kaiin-body__main__box__inner__contents__form-box
+                %label.kaiin-body__main__box__inner__contents__form-box__nick-name
+                  ニックネーム
+                %span.kaiin-body__main__box__inner__contents__form-box__hissu
+                  必須
+                %input.kaiin-body__main__box__inner__contents__form-box__input-box{placeholder: "例) メルカリ太郎"}
+              .kaiin-body__main__box__inner__contents__form-box2-8
+                %label.kaiin-body__main__box__inner__contents__form-box__e-mail 
+                  メールアドレス
+                %span.kaiin-body__main__box__inner__contents__form-box__hissu
+                  必須
+                %input.kaiin-body__main__box__inner__contents__form-box__input-box{placeholder: "PC・携帯どちらでも可"}
+              .kaiin-body__main__box__inner__contents__form-box2-8
+                %label.kaiin-body__main__box__inner__contents__form-box__password
+                  パスワード
+                %span.kaiin-body__main__box__inner__contents__form-box__hissu
+                  必須
+                %input.kaiin-body__main__box__inner__contents__form-box__input-box{placeholder: "6文字以上"}
+              .kaiin-body__main__box__inner__contents__form-box2-8
+                %label.kaiin-body__main__box__inner__contents__form-box__password-confirmation
+                  パスワード（確認）
+                %span.kaiin-body__main__box__inner__contents__form-box__hissu
+                  必須
+                %input.kaiin-body__main__box__inner__contents__form-box__input-box{placeholder: "6文字以上"}
+              .kaiin-body__main__box__inner__contents__form-box2-8
+                %h3.kaiin-body__main__box__inner__contents__form-box2-8__h3
+                  本人確認
+                %p.kaiin-body__main__box__inner__contents__form-box2-8__h3__honbun
+                  安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
+              .kaiin-body__main__box__inner__contents__form-box2-8
+                %label.kaiin-body__main__box__inner__contents__form-box__full-name
+                  お名前（全角）
+                %span.kaiin-body__main__box__inner__contents__form-box__hissu
+                  必須
+                .kaiin-body__main__box__inner__contents__form-box2-8__doublebox
+                  %input.kaiin-body__main__box__inner__contents__form-box2-8__doublebox__input-box2{placeholder: "例）山田"}
+                  %input.kaiin-body__main__box__inner__contents__form-box2-8__doublebox__input-box2{placeholder: "例）太郎"}
+              .kaiin-body__main__box__inner__contents__form-box2-8
+                %label.kaiin-body__main__box__inner__contents__form-box__full-kana-name
+                  お名前カナ（全角）
+                %span.kaiin-body__main__box__inner__contents__form-box__hissu
+                  必須
+                .kaiin-body__main__box__inner__contents__form-box2-8__doublebox
+                  %input.kaiin-body__main__box__inner__contents__form-box2-8__doublebox__input-box2{placeholder: "例）ヤマダ"}
+                  %input.kaiin-body__main__box__inner__contents__form-box2-8__doublebox__input-box2{placeholder: "例）タロウ"}
+              .kaiin-body__main__box__inner__contents__form-box2-8
+                %label.kaiin-body__main__box__inner__contents__form-box__birthday
+                  生年月日
+                %span.kaiin-body__main__box__inner__contents__form-box__hissu
+                  必須
+                .kaiin-body__main__box__inner__contents__form-box2-8__doublebox
+                  .kaiin-body__main__box__inner__contents__form-box2-8__doublebox__select
+                    = fa_icon "angle-down" , class: "angle-down"
+                    %select.kaiin-body__main__box__inner__contents__form-box2-8__doublebox__select__down-box 
+                    %span.kaiin-body__main__box__inner__contents__form-box2-8__doublebox__select__text 年
+                  .kaiin-body__main__box__inner__contents__form-box2-8__doublebox__select
+                    = fa_icon "angle-down" , class: "angle-down"
+                    %select.kaiin-body__main__box__inner__contents__form-box2-8__doublebox__select__down-box
+                    %span.kaiin-body__main__box__inner__contents__form-box2-8__doublebox__select__text 月
+                  .kaiin-body__main__box__inner__contents__form-box2-8__doublebox__select
+                    = fa_icon "angle-down" , class: "angle-down"
+                    %select.kaiin-body__main__box__inner__contents__form-box2-8__doublebox__select__down-box
+                    %span.kaiin-body__main__box__inner__contents__form-box2-8__doublebox__select__text 日
+              .kaiin-body__main__box__inner__contents__text-info
+                ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
+            .kaiin-body__main__box__inner__contents
+              .kaiin-body__main__box__inner__contents__robot
+                %select.kaiin-body__main__box__inner__contents__robot__box
+                  私はロボットではありませんよ。
+              .kaiin-body__main__box__inner__contents__form-box2-8
+                %p.kaiin-body__main__box__inner__contents__form-box2-8__text
+                  「次へ進む」のボタンを押すことにより,
+                = link_to '利用規約', '' , class: 'kiyaku' 
+                %p.kaiin-body__main__box__inner__contents__form-box2-8__text
+                  に同意したものとします。
+              %submit.kaiin-body__main__box__inner__contents__btm
+                次へ進む
+              .kaiin-body__main__box__inner__contents__touroku-information
+                %p.kaiin-body__main__box__inner__contents__touroku-information__text-box
+                  = link_to '本人情報の登録について', '' , class: 'kiyaku' 
+                  = fa_icon "angle-right" , class: "angle-right-icon"
+    = render "shared/footer-log"

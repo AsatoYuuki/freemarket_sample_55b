@@ -33,7 +33,6 @@
             完了
           .progress-bar__dot.dot-bars5
             ●
-
     .adress-main
       .adress-main__box
         %h2.adress-main__box__text
@@ -94,12 +93,4 @@
             .form-group-btn-box
               %submit.btn-next-box
                 次へ進む
-      .login-body__footer
-        %ul.login-body__footer__clearfix
-          %li.login-body__footer__clearfix__privacy プライバシーポリシー
-          %li.login-body__footer__clearfix__tos  メルカリ利用規約
-          %li.login-body__footer__clearfix__tokutei  特定商取引に関する表記
-        .login-body__footer__logo
-          = image_tag "image_grey.png" , width: 100 , height: 65
-        .login-body__footer__small
-          ©️2019 Mercari
+    = render "shared/footer-log"
