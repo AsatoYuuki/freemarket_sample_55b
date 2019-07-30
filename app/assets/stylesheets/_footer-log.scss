@@ -1,0 +1,59 @@
+.log-body{
+  position: relative;
+  min-height: 100%;
+  background: #f5f5f5;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  font-size: 14px;
+  color: $black;
+  line-height: 1; 
+  &__container {
+    padding: 0 0 300px;
+    box-sizing: border-box;
+    height: 100%;
+  }
+&__footer{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  padding: 40px 0;
+  text-align: center;
+  width: 456px;
+  height: 220px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  &__clearfix{
+    color: $black;
+    &__privacy{
+      display: block;
+      color:$black;
+      display: inline-block;
+      font-size: 12px;
+    }
+    &__tos{
+      display: block;
+      color: $black;
+      display: inline-block;
+      font-size: 12px;
+      margin: 0 0 0 16px;
+    }
+    &__tokutei{
+      display: block;
+      color:$black;
+      display: inline-block;
+      font-size: 12px;
+      margin: 0 0 0 16px;
+    }
+   }       
+  &__logo{
+    height: 65px;
+    margin: 40px auto 0;
+    text-align: center;
+  }
+  &__small{
+    font-size: 13px;
+    margin-top: 10px; 
+  }
+}
+}

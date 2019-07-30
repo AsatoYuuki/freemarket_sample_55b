@@ -1,0 +1,159 @@
+@import "variable.scss";
+
+.sns-icon{
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  font-size: 22px;
+}
+
+.link-three{
+  text-decoration: none;
+}
+.login-body{
+  position: relative;
+  min-height: 100%;
+  background: #f5f5f5;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  font-size: 14px;
+  color: $black;
+  line-height: 1; 
+  &__container {
+    padding: 0 0 300px;
+    box-sizing: border-box;
+    &__header{
+      text-align: center;
+      height: 128px;
+      &__h1{
+        display: inline-block;
+        margin: 40px 0 0;
+        &__url{
+          width: 185px;
+          height: 49px;
+          line-height: 49px;
+          display: inline-block;
+          margin: 0 8px 0 0;
+          &__img{
+            width: 185px;
+            height: 49px;
+          }
+        }
+      }
+    }
+    &__main{
+      display: block;
+      &__box{
+        background: $white;
+        width: 700px;
+        margin: 0 auto;
+        &__h2{
+          font-size: 22px;
+          padding: 32px;
+          line-height: 1.5;
+          text-align: center;
+        }
+        &__form{
+          padding: 24px 16px 40px;
+          border-top: 1px solid $dark_gray;
+          &__contents{
+            max-width: 343px;
+            margin: 0 auto;
+            &__btn-mail{
+              color: $white;
+              background-color: $red;
+              display: block;
+              width: 100%;
+              line-height: 48px;
+              font-size: 14px;
+              border: 1px solid transparent;
+              -webkit-transition: all ease-out .3s;
+              transition: all ease-out .3s;
+              cursor: pointer;
+              text-align: center;
+              border-radius: 4px;
+              position: relative;
+            }
+            &__btn-sns-facebook{
+              margin: 16px 0 0;
+              background: #385185;
+              color: $white;
+              display: block;
+              width: 100%;
+              line-height: 48px;
+              font-size: 14px;
+              border: 1px solid transparent;
+              -webkit-transition: all ease-out .3s;
+              transition: all ease-out .3s;
+              cursor: pointer;
+              text-align: center;
+              border-radius: 4px;
+              position: relative;
+            }
+            &__btn-sns-google{
+              margin: 16px 0 0;
+              background: $white url(/jp/assets/img/common/common/google.svg) no-repeat 3px top;
+              border: $pale_gray solid 1px;
+              color: $black;
+              display: block;
+              width: 100%;
+              line-height: 48px;
+              font-size: 14px;
+              transition: all ease-out .3s;
+              cursor: pointer;
+              text-align: center;
+              border-radius: 4px;
+              position: relative; 
+            }
+          }
+        }
+      }
+    }
+  }
+    &__footer{
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      padding: 40px 0;
+      text-align: center;
+      width: 456px;
+      height: 220px;
+      margin: 0 auto;
+      box-sizing: border-box;
+      &__clearfix{
+        color: $black;
+        &__privacy{
+          display: block;
+          color:$black;
+          display: inline-block;
+          font-size: 12px;
+        }
+        &__tos{
+          display: block;
+          color: $black;
+          display: inline-block;
+          font-size: 12px;
+          margin: 0 0 0 16px;
+        }
+        &__tokutei{
+          display: block;
+          color:$black;
+          display: inline-block;
+          font-size: 12px;
+          margin: 0 0 0 16px;
+        }
+       }       
+      &__logo{
+        height: 65px;
+        margin: 40px auto 0;
+        text-align: center;
+      }
+      &__small{
+        font-size: 13px;
+        margin-top: 10px; 
+      }
+    }
+}
