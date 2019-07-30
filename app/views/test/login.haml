@@ -1,0 +1,32 @@
+.log-body
+  .log-body__container
+    = render "shared/header-log"
+    .main
+      .main__box
+        .main__box__no-login
+          %p.main__box__no-login__text
+            アカウントをお持ちでない方はこちら
+          = link_to 'https://www.facebook.com', class: 'link-three' do
+            .main__box__no-login__box
+              新規会員登録
+        .main__box__form-inner
+          = link_to 'https://www.facebook.com', class: 'link-three' do
+            .main__box__form-inner__facebook-btn
+              = fa_icon 'facebook-square', class: 'sns-icon fa-2x'
+              Facebookで登録する
+          = link_to 'https://www.google.com/?hl=ja', class: 'link-three' do
+            .main__box__form-inner__google-btn
+              = fa_icon 'google', class:'sns-icon fa-lg'
+              Googleで登録する
+        .main__box__form-box
+          .main__box-inner
+            %input.main__box-inner__input-mail{placeholder: "メールアドレス"}
+            %input.main__box-inner__input-password{placeholder: "パスワード"}
+            .kaiin-body__main__box__inner__contents__robot
+              %select.kaiin-body__main__box__inner__contents__robot__box 
+            %submit.main__box-inner__btm 
+              ログイン
+            .main__box-inner__information
+              %p.main__box-inner__text-box
+                = link_to 'パスワードをお忘れの方', '' , class: 'kiyaku' 
+    = render "shared/footer-log"

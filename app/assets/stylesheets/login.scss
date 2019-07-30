@@ -1,18 +1,4 @@
-@import "variable.scss";
-
-.sns-icon{
-  position: absolute;
-  top: 50%;
-  left: 16px;
-  -webkit-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-  font-size: 22px;
-}
-
-.link-three{
-  text-decoration: none;
-}
-.login-body{
+.log-body{
   position: relative;
   min-height: 100%;
   background: #f5f5f5;
@@ -23,9 +9,12 @@
   &__container {
     padding: 0 0 300px;
     box-sizing: border-box;
+    height: 100%;
     &__header{
-      text-align: center;
+      margin: auto;
+      width: 700px;
       height: 128px;
+      text-align: center;
       &__h1{
         display: inline-block;
         margin: 40px 0 0;
@@ -42,118 +31,115 @@
         }
       }
     }
-    &__main{
+    .main{
       display: block;
       &__box{
         background: $white;
-        width: 700px;
+        width: 456px;
         margin: 0 auto;
-        &__h2{
-          font-size: 22px;
-          padding: 32px;
-          line-height: 1.5;
-          text-align: center;
+        &__no-login{
+          padding: 40px 64px;
+          &__text{
+            font-size: 14px;
+            text-align: center;
+          }
+          &__box{
+            display: block;
+            margin: 8px 0 0;
+            border: 1px solid #0099e8;
+            background: #0099e8;
+            color: #fff;
+            line-height: 40px;
+            text-align: center;
+          }
+          
         }
-        &__form{
-          padding: 24px 16px 40px;
-          border-top: 1px solid $dark_gray;
-          &__contents{
-            max-width: 343px;
-            margin: 0 auto;
-            &__btn-mail{
-              color: $white;
-              background-color: $red;
-              display: block;
+        &__form-inner{
+          padding: 40px 64px;
+          border-top: 1px solid #eee;
+          &__facebook-btn{
+            background: #385185;
+            color: $white;
+            display: block;
+            width: 100%;
+            line-height: 48px;
+            font-size: 14px;
+            border: 1px solid transparent;
+            -webkit-transition: all ease-out .3s;
+            transition: all ease-out .3s;
+            cursor: pointer;
+            text-align: center;
+            position: relative;
+          }
+          &__google-btn{
+            margin: 16px 0 0;
+            background: $white url(/jp/assets/img/common/common/google.svg) no-repeat 3px top;
+            border: $pale_gray solid 1px;
+            color: $black;
+            display: block;
+            width: 100%;
+            line-height: 48px;
+            font-size: 14px;
+            transition: all ease-out .3s;
+            cursor: pointer;
+            text-align: center;
+            position: relative; 
+          }
+        }
+        &__form-box{
+          background-repeat: no-repeat;
+          margin: 0;
+          padding: 0;
+          .main__box-inner{
+            padding: 24px 64px 32px;
+            &__input-mail{
+              height: 48px;
+              padding: 10px 16px 8px;
+              border-radius: 4px;
+              border: 1px solid #ccc;
+              background: #fff;
+              line-height: 1.5;
+              font-size: 16px;
               width: 100%;
+              margin: 4px 0 0;
+              box-sizing: border-box;
+              }
+            &__input-password{
+              height: 48px;
+              padding: 10px 16px 8px;
+              border-radius: 4px;
+              border: 1px solid #ccc;
+              background: #fff;
+              line-height: 1.5;
+              font-size: 16px;
+              width: 100%;
+              margin: 24px 0 0;
+              box-sizing: border-box;
+            }
+            &__btm{
+              box-sizing: border-box;
+              background: #ea352d;
+              border: 1px solid #ea352d;
+              color: #fff;
+              display: block;
+              margin: 24px 0 0;
+              width: 100%;
+              height: 50px;
               line-height: 48px;
               font-size: 14px;
+              text-align: center;
               border: 1px solid transparent;
               -webkit-transition: all ease-out .3s;
               transition: all ease-out .3s;
               cursor: pointer;
-              text-align: center;
-              border-radius: 4px;
-              position: relative;
             }
-            &__btn-sns-facebook{
-              margin: 16px 0 0;
-              background: #385185;
-              color: $white;
+            &__information{
               display: block;
-              width: 100%;
-              line-height: 48px;
-              font-size: 14px;
-              border: 1px solid transparent;
-              -webkit-transition: all ease-out .3s;
-              transition: all ease-out .3s;
-              cursor: pointer;
-              text-align: center;
-              border-radius: 4px;
-              position: relative;
-            }
-            &__btn-sns-google{
-              margin: 16px 0 0;
-              background: $white url(/jp/assets/img/common/common/google.svg) no-repeat 3px top;
-              border: $pale_gray solid 1px;
-              color: $black;
-              display: block;
-              width: 100%;
-              line-height: 48px;
-              font-size: 14px;
-              transition: all ease-out .3s;
-              cursor: pointer;
-              text-align: center;
-              border-radius: 4px;
-              position: relative; 
+              margin: 40px 0 0;
             }
           }
         }
       }
     }
   }
-    &__footer{
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: 1;
-      padding: 40px 0;
-      text-align: center;
-      width: 456px;
-      height: 220px;
-      margin: 0 auto;
-      box-sizing: border-box;
-      &__clearfix{
-        color: $black;
-        &__privacy{
-          display: block;
-          color:$black;
-          display: inline-block;
-          font-size: 12px;
-        }
-        &__tos{
-          display: block;
-          color: $black;
-          display: inline-block;
-          font-size: 12px;
-          margin: 0 0 0 16px;
-        }
-        &__tokutei{
-          display: block;
-          color:$black;
-          display: inline-block;
-          font-size: 12px;
-          margin: 0 0 0 16px;
-        }
-       }       
-      &__logo{
-        height: 65px;
-        margin: 40px auto 0;
-        text-align: center;
-      }
-      &__small{
-        font-size: 13px;
-        margin-top: 10px; 
-      }
-    }
 }
