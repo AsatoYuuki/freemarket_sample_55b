@@ -77,3 +77,5 @@ group :development, :test do
 end
 
 gem 'ancestry'
+gem 'carrierwave'
+gem 'mini_magick'
