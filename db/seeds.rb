@@ -321,6 +321,67 @@ interior_seasonalgoods.children.create([{name:"正月"}, {name:"成人式"}, {na
 
 
 
+entertainments = Category.create(name: "本・音楽・・ゲーム")
+
+entbook = entertainments.children.create(name: "本")
+entbook.children.create([{name: "文学/小説"}, {name: "人文/社会"}, {name: "ノンフィクション/教養"}, {name: "地図/旅行ガイド"}, {name: "ビジネス/経済"}, {name: "健康/医学"}, {name: "コンピュータ/IT"}, {name: "趣味/スポーツ/実用"}, {name: "住まい/暮らし/子育て"}, {name: "アート/エンタメ"}, {name: "洋書"}, {name: "絵本"}, {name: "参考書"}, {name: "その他"}])
+
+entcomic = entertainments.children.create(name: "漫画")
+entcomic.children.create([{name: "全巻セット"}, {name: "少年漫画"}, {name: "少女漫画"}, {name: "青年漫画"}, {name: "女性漫画"}, {name: "同人誌"}, {name: "その他"}])
+
+entmagazine = entertainments.children.create(name: "雑誌")
+entmagazine.children.create([{name: "アート/エンタメ/ホビー"}, {name: "ファッション"}, {name: "ニュース/総合"}, {name: "趣味/スポーツ"}, {name: "その他"}])
+
+entmusic = entertainments.children.create(name: "CD")
+entmusic.children.create([{name: "邦楽"}, {name: "洋楽"}, {name: "アニメ"}, {name: "クラシック"}, {name: "KPOP/アジア"}, {name: "キッズ/ファミリー"}, {name: "その他"}])
+
+entvideo = entertainments.children.create(name: "DVD/ブルーレイ")
+entvideo.children.create([{name: "外国映画"}, {name: "日本映画"}, {name: "アニメ"}, {name: "TVドラマ"}, {name: "ミュージック"}, {name: "お笑い/バラエティ"}, {name: "スポーツ/フィットネス"}, {name: "キッズ/ファミリー"}, {name: "その他"}])
+
+entdisc = entertainments.children.create(name: "レコード")
+entdisc.children.create([{name: "邦楽"}, {name: "洋楽"}, {name: "その他"}])
+
+entgame = entertainments.children.create(name: "テレビゲーム")
+entgame.children.create([{name: "家庭用ゲーム本体"}, {name: "家庭用ゲームソフト"}, {name: "携帯用ゲーム本体"}, {name: "携帯用ゲームソフト"}, {name: "PCゲーム"}, {name: "その他"}])
+
+
+
+otaku = Category.create(name: "おもちゃ・ホビー・グッズ")
+
+oplay = otaku.children.create(name: "おもちゃ")
+oplay.children.create([{name: "キャラクターグッズ"}, {name: "ぬいぐるみ"}, {name: "小物/アクセサリー"}, {name: "模型/プラモデル"}, {name: "ミニカー"}, {name: "トイラジコン"}, {name: "プラモデル"}, {name: "ホビーラジコン"}, {name: "鉄道模型"}, {name: "その他"}])
+
+ofamous = otaku.children.create(name: "タレントグッズ")
+ofamous.children.create([{name: "アイドル"}, {name: "ミュージシャン"}, {name: "タレント/お笑い芸人"}, {name: "スポーツ選手"}, {name: "その他"}])
+
+onizigen = otaku.children.create(name: "コミック/アニメグッズ")
+onizigen.children.create([{name: "ストラップ"}, {name: "キーホルダー"}, {name: "バッジ"}, {name: "カード"}, {name: "クリアファイル"}, {name: "ポスター"}, {name: "タオル"}, {name: "その他"}])
+
+ocard = otaku.children.create(name: "トレーディングカード")
+ocard.children.create([{name: "遊戯王"}, {name: "マジック：ザ・ギャザリング"}, {name: "ポケモンカードゲーム"}, {name: "デュエルマスターズ"}, {name: "バトルスピリッツ"}, {name: "プリパラ"}, {name: "アイカツ"}, {name: "カードファイト!!ヴァンガード"}, {name: "ヴァイスシュバルツ"}, {name: "プロ野球オーナーズリーグ"}, {name: "ベースボールヒーローズ"}, {name: "ドラゴンボール"}, {name: "スリーブ"}, {name: "その他"}])
+
+odoll= otaku.children.create(name: "フィギュア")
+odoll.children.create([{name: "コミック/アニメ"}, {name: "特撮"}, {name: "ゲームキャラクター"}, {name: "SF/ファンタジー/ホラー"}, {name: "アメコミ"}, {name: "スポーツ"}, {name: "ミリタリー"}, {name: "その他"}])
+
+oband = otaku.children.create(name: "楽器/機材")
+oband.children.create([{name: "エレキギター"}, {name: "アコースティックギター"}, {name: "ベース"}, {name: "エフェクター"}, {name: "アンプ"}, {name: "弦楽器"}, {name: "管楽器"}, {name: "鍵盤楽器"}, {name: "打楽器"}, {name: "和楽器"}, {name: "楽譜/スコア"}, {name: "レコーディング/PA機器"}, {name: "DJ機器"}, {name: "DTM/DAW"}, {name: "その他"}])
+
+omemolial = otaku.children.create(name: "コレクション")
+omemolial.children.create([{name: "武具"}, {name: "使用済切手/官製はがき"}, {name: "旧貨幣/金貨/銀貨/記念硬貨"}, {name: "印刷物"}, {name: "ノベルティグッズ"}, {name: "その他"}])
+
+ogun = otaku.children.create(name: "ミリタリー")
+ogun.children.create([{name: "トイガン"}, {name: "個人装備"}, {name: "その他"}])
+
+
+oart = otaku.children.create(name: "美術品")
+oart.children.create([{name: "陶芸"}, {name: "ガラス"}, {name: "漆芸"}, {name: "金属工芸"}, {name: "絵画/タペストリ"}, {name: "版画"}, {name: "彫刻/オブジェクト"}, {name: "書"}, {name: "写真"}, {name: "その他"}])
+
+ohude = otaku.children.create(name: "アート用品")
+ohude.children.create([{name: "画材"}, {name: "額縁"}, {name: "その他"}])
+
+oyorozu = otaku.children.create(name: "その他")
+oyorozu.children.create([{name: "トランプ/UNO"}, {name: "カルタ/百人一首"}, {name: "ダーツ"}, {name: "ビリヤード"}, {name: "麻雀"}, {name: "パズル/ジクソーパズル"}, {name: "囲碁/将棋"}, {name: "オセロ/チェス"}, {name: "人生ゲーム"}, {name: "野球/サッカーゲーム"}, {name: "スポーツ"}, {name: "三輪車/乗り物"}, {name: "ヨーヨー"}, {name: "模型型作品"}, {name: "鉄道"}, {name: "航空機"}, {name: "アマチュア無線"}, {name: "パチンコ/パチスロ"}, {name: "その他"}])
+
 # 本・音楽・ゲーム
 
 # おもちゃ・ホビー・グッズ
