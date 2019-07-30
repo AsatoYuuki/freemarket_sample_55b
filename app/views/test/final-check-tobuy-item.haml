@@ -1,52 +1,56 @@
-.buy-item-wrapper
-  .body-confirmation
-    %h2.body-confirmation__title
-      購入内容の確認
-    .body-confirmation__main
-      .body-confirmation__main__inner
-        .body-confirmation__main__inner__top
-          %h3.buy-item-image
-            = image_tag "sample-sell-bag.jpg" , width: 64, height:64
-          %p.buy-item-name
-            【新品】革 bag 茶色 
-        .body-confirmation__main__inner__bottom
-          %p.buy-price
-            ¥ 1,780
-            %span.buy-price__shipping-fee
-              送料込み
-          %ul.buy-point
-            ポイントはありません
-          %ul.final-price
-            %li.final-price__cell
-              支払い金額
-            %li.final-price__cell2
-              ¥1,780
-          %button.submit-buy-button
-            = link_to "", class: "" do
-              購入する
-    .body-confirmation__address
-      .body-confirmation__address__inner
-        %h3.body-confirmation__address__inner__ship
-          配送先
-        .body-confirmation__address__inner__box
-        〒***-**** 
-        %br
-        愛知県 〇〇市 〇〇〇〇 
-        %br
-        めるめるさん
-        %br
-        .body-confirmation__address__inner__bottom
-          =link_to "変更する ＞","",class: "body-confirmation__address__inner__bottom__link"
-    .body-confirmation__how-to-pay
-      .body-confirmation__how-to-pay__inner
-        %h4.body-confirmation__how-to-pay__inner__cregit
-          支払い方法
-        .body-confirmation__how-to-pay__inner__box
-          ************1549 
-          %br
-          05 / 22
-          %br
-          .body-confirmation__how-to-pay__inner__cregit__pic
-            = image_tag "jcb.png",size: "25x25"
-          .body-confirmation__address__inner__bottom
-            =link_to "変更する ＞","",class: "body-confirmation__address__inner__bottom__link"
+.log-body
+  .log-body__container
+    = render "shared/header-log"
+    .buy-item-wrapper
+      .body-confirmation
+        %h2.body-confirmation__title
+          購入内容の確認
+        .body-confirmation__main
+          .body-confirmation__main__inner
+            .body-confirmation__main__inner__top
+              %h3.buy-item-image
+                = image_tag "sample-sell-bag.jpg" , width: 64, height:64
+              %p.buy-item-name
+                【新品】革 bag 茶色 
+            .body-confirmation__main__inner__bottom
+              %p.buy-price
+                ¥ 1,780
+                %span.buy-price__shipping-fee
+                  送料込み
+              %ul.buy-point
+                ポイントはありません
+              %ul.final-price
+                %li.final-price__cell
+                  支払い金額
+                %li.final-price__cell2
+                  ¥1,780
+              %button.submit-buy-button
+                = link_to "", class: "" do
+                  購入する
+        .body-confirmation__address
+          .body-confirmation__address__inner
+            %h3.body-confirmation__address__inner__ship
+              配送先
+            .body-confirmation__address__inner__box
+            〒***-**** 
+            %br
+            愛知県 〇〇市 〇〇〇〇 
+            %br
+            めるめるさん
+            %br
+            .body-confirmation__address__inner__bottom
+              =link_to "変更する ＞","",class: "body-confirmation__address__inner__bottom__link"
+        .body-confirmation__how-to-pay
+          .body-confirmation__how-to-pay__inner
+            %h4.body-confirmation__how-to-pay__inner__cregit
+              支払い方法
+            .body-confirmation__how-to-pay__inner__box
+              ************1549 
+              %br
+              05 / 22
+              %br
+              .body-confirmation__how-to-pay__inner__cregit__pic
+                = image_tag "jcb.png",size: "25x25"
+              .body-confirmation__address__inner__bottom
+                =link_to "変更する ＞","",class: "body-confirmation__address__inner__bottom__link"
+    = render "shared/footer-log"
