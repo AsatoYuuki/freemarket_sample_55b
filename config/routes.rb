@@ -9,4 +9,7 @@ Rails.application.routes.draw do
 
   resource :sell do
   end
+
+  resource :users do
+  end
 end

@@ -9,9 +9,10 @@
           新規会員登録
         .login-body__container__main__box__form
           .login-body__container__main__box__form__contents
-            %i.login-body__container__main__box__form__contents__btn-mail
-              = fa_icon 'envelope', class: 'sns-icon fa-lg'
-              メールアドレスで登録する
+            = link_to new_users_path, class: 'link-three' do
+              %i.login-body__container__main__box__form__contents__btn-mail
+                = fa_icon 'envelope', class: 'sns-icon fa-lg'
+                メールアドレスで登録する
             = link_to 'https://www.facebook.com', class: 'link-three' do
               .login-body__container__main__box__form__contents__btn-sns-facebook
                 = fa_icon 'facebook-square', class: 'sns-icon fa-2x'
