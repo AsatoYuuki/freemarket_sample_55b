@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'test#index'
+  resources :search,only: [:index]
   resource :mypage do
     resource :profile ,only: [:show]
     resource :card ,only: [:show,:create] 

@@ -8,7 +8,7 @@
         .toppage-header__box__top__right__search
           %input{type: "search", class: "search", placeholder: "何かお探しですか？" }
         .toppage-header__box__top__right__icon
-          = link_to "", class: "search-icon-link" do
+          = link_to search_index_path, class: "search-icon-link" do
             = fa_icon 'search', class: "search-icon"
     .toppage-header__box__bottom
       .toppage-header__box__bottom__li
