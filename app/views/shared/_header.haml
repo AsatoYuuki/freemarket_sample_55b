@@ -45,8 +45,8 @@
         -# #ログインしていない場合
         %ul.toppage-header__box__bottom__li__right2
           %li.toppage-header__box__bottom__li__right2__signup
-            = link_to "", class: "toppage-header__box__bottom__li__right2__signup__icon" do
+            = link_to new_user_registration_path, class: "toppage-header__box__bottom__li__right2__signup__icon" do
               新規会員登録
           %li.toppage-header__box__bottom__li__right2__login
-            = link_to "", class: "toppage-header__box__bottom__li__right2__login__icon" do
+            = link_to new_user_session_path, class: "toppage-header__box__bottom__li__right2__login__icon" do
               ログイン
