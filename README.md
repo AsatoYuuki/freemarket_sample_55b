@@ -71,28 +71,16 @@ Things you may want to cover:
 |user_id|integer|null: false, foreign_key: true|
 |status|integer|default: 0|
 |brand_id|integer|foreign_key: true|
+|category_id|integer|foreign_key: true|
 
 
 ## association
 - has_many :images
 - has_many :likes
 - has_many :comments
-- has_many :categories, through: :item_categories
-- has_many :item_categories
+- belongs_to :categories
 - belongs_to :user
 - belongs_to :brand
-
-
-## item_categories table
-|Colmun|Type|Options|
-|------|----|-------|
-|item_id|integer|null: false, foreign_key: true|
-|category_id|integer|null: false, foreign_key: true|
-
-## association
-- belongs_to :item
-- belongs_to :category
-
 
 ## categories table
 |Colmun|Type|Options|
@@ -100,8 +88,7 @@ Things you may want to cover:
 |name|string|null: false, index: true|
 
 ## association
-- has_many :item_categories
-- has_many :items, through: :item_categories
+- has_many :items
 - has_ancestry
 
 
