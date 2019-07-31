@@ -152,6 +152,8 @@
       font-weight: 600;
       font-size: 14px;
 
+  
+
       .form-box{
         margin: 0;
         display: flex;
@@ -325,12 +327,17 @@
         @include submit-button(100%,$red)
       }
 
-      .text__submit-button-return{
-        width: 45%;
-        margin: 24px auto 0;
-        border: 1px solid button-gray;
-        color: #fff;
-        @include submit-button(45%,$button-gray)
+      .return-button{
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        .text__submit-button-return{
+          width: 45%;
+          margin: 24px auto 0;
+          border: 1px solid button-gray;
+          color: #fff;
+          @include submit-button(45%,$button-gray)
+        }
       }
     }
   }

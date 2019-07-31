@@ -146,8 +146,9 @@
                 %a.text__conf__link
                   加盟店規約
                 に同意したことになります。
-            %button.text__submit-button
-              出品する
-            %button.text__submit-button-return
-              もどる
-    = render "shared/footer-log"
+              %button.text__submit-button
+                出品する
+            = link_to mypage_path,class:"return-button" do
+              %button.text__submit-button-return
+                もどる
+  = render "shared/footer-log"
