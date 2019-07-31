@@ -23,30 +23,30 @@
               ブランドから探す
 
         -# #ログインしている場合
-        %ul.toppage-header__box__bottom__li__right
-          %li.toppage-header__box__bottom__li__right__iine
-            = link_to "", class: "iine-message-todo" do
-              = fa_icon 'heart', class: "search-icon-right"
-              %span
-                いいね！一覧
-          %li.toppage-header__box__bottom__li__right__message
-            = link_to "", class: "iine-message-todo" do
-              = fa_icon 'bell', class: "search-icon-right"
-              お知らせ
-          %li.toppage-header__box__bottom__li__right__todo
-            = link_to "", class: "iine-message-todo" do
-              = fa_icon 'check', class: "search-icon-right"
-              やることリスト
-          %li.toppage-header__box__bottom__li__right__mypage
-            = image_tag 'avator.png', class: 'gotomypage-icon', height: '32', width: '32'
-            = link_to mypage_path, class: "gotomypage" do
-              マイページ
+        -# %ul.toppage-header__box__bottom__li__right
+        -#   %li.toppage-header__box__bottom__li__right__iine
+        -#     = link_to "", class: "iine-message-todo" do
+        -#       = fa_icon 'heart', class: "search-icon-right"
+        -#       %span
+        -#         いいね！一覧
+        -#   %li.toppage-header__box__bottom__li__right__message
+        -#     = link_to "", class: "iine-message-todo" do
+        -#       = fa_icon 'bell', class: "search-icon-right"
+        -#       お知らせ
+        -#   %li.toppage-header__box__bottom__li__right__todo
+        -#     = link_to "", class: "iine-message-todo" do
+        -#       = fa_icon 'check', class: "search-icon-right"
+        -#       やることリスト
+        -#   %li.toppage-header__box__bottom__li__right__mypage
+        -#     = image_tag 'avator.png', class: 'gotomypage-icon', height: '32', width: '32'
+        -#     = link_to mypage_path, class: "gotomypage" do
+        -#       マイページ
 
         -# #ログインしていない場合
-        -# %ul.toppage-header__box__bottom__li__right2
-        -#   %li.toppage-header__box__bottom__li__right2__signup
-        -#     = link_to "", class: "toppage-header__box__bottom__li__right2__signup__icon" do
-        -#       新規会員登録
-        -#   %li.toppage-header__box__bottom__li__right2__login
-        -#     = link_to "", class: "toppage-header__box__bottom__li__right2__login__icon" do
-        -#       ログイン
+        %ul.toppage-header__box__bottom__li__right2
+          %li.toppage-header__box__bottom__li__right2__signup
+            = link_to new_user_registration_path, class: "toppage-header__box__bottom__li__right2__signup__icon" do
+              新規会員登録
+          %li.toppage-header__box__bottom__li__right2__login
+            = link_to new_user_session_path, class: "toppage-header__box__bottom__li__right2__login__icon" do
+              ログイン

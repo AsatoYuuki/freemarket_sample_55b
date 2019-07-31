@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root 'test#index'
   resource :mypage do
     resource :profile ,only: [:show]
