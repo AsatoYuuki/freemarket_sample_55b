@@ -14,10 +14,12 @@ ActiveRecord::Schema.define(version: 2019_07_31_031810) do
 
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
+    t.string "categories"
+    t.string "ancestry"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "ancestry"
     t.index ["ancestry"], name: "index_categories_on_ancestry"
+    t.index ["categories"], name: "index_categories_on_categories"
     t.index ["name"], name: "index_categories_on_name"
   end
 
@@ -42,6 +44,7 @@ ActiveRecord::Schema.define(version: 2019_07_31_031810) do
     t.integer "user_id", null: false
     t.integer "status", default: 0
     t.integer "brand_id"
+    t.integer "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
