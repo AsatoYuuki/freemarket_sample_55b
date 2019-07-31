@@ -78,7 +78,7 @@ Things you may want to cover:
 - has_many :images
 - has_many :likes
 - has_many :comments
-- belongs_to :categories
+- belongs_to :category
 - belongs_to :user
 - belongs_to :brand
 
