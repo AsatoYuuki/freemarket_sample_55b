@@ -2,14 +2,8 @@
   = render "shared/header"
 %nav.second-header
   %ul.second-header__box
-    %li.second-header__box__left
-      = link_to "メルカリ",root_path, class:"left-header" 
-      = fa_icon 'angle-right' ,class:"right-angle fa-lg"
-      .center-header
-        = link_to "マイページ",mypage_path, class:"center-header"
-        = fa_icon 'angle-right' ,class:"right-angle fa-lg"
-      .right-header
-        ログアウト
+    - breadcrumb :logout
+    = breadcrumbs pretext: "",separator: " &rsaquo; ", class: "bread"
 .wrapper#background
   .container.clearfix
     = render "shared/side-list"

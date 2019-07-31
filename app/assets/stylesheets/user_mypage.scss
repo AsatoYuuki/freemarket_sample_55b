@@ -15,30 +15,29 @@
     font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
     box-sizing: border-box;
     
-    &__left{
-      display: inline-block;
-      font-size: 14px;
-      line-height: 1.2;
+    .breadcrumbs{
+      font-weight: bold;
+    }
 
-      .left-header{
+    .bread {
+      color: gray;
+      font-size: 20px;
+
+      a {
         text-decoration: none;
+        font-weight: normal;
         color: $black;
-        margin-left: 25px;
-
+        font-size: 14px;
+        
         &:hover{
-          color: $button-gray;
           text-decoration: underline;
+          color: gray;
         }
       }
-      .right-angle{
-        margin: 0 8px;
-        font-size: 20px;
-        color: #888;
-        
-      }
-      .right-header{
-        font-weight: 600;
-        display: inline-block;
+
+      .current {
+        font-weight: bold;
+        color: $black;
         font-size: 14px;
       }
     }
