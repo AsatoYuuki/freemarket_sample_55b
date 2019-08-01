@@ -1,6 +1,11 @@
 @import "mixin";
 @import "variable";
 
+
+.login-hidden{
+  display: none;
+};
+
 .form-group__arbitrarily{
   @include form-icon($pale_gray);
   padding: 3px 4px;
