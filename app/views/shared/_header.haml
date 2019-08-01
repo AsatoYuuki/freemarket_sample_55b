@@ -5,10 +5,12 @@
         = link_to do
           = image_tag 'main-logo.png', height: '52', width: '167'
       .toppage-header__box__top__right
-        .toppage-header__box__top__right__search
-          %input{type: "search", class: "search", placeholder: "何かお探しですか？" }
-        .toppage-header__box__top__right__icon
-          = link_to search_index_path, class: "search-icon-link" do
+        = form_with url: search_index_path, method: :get, local: true do|f|
+          .toppage-header__box__top__right__search
+            = f.text_field :search,class: "search", placeholder: "何かお探しですか？"
+          .toppage-header__box__top__right__icon
+            
+            = f.submit 
             = fa_icon 'search', class: "search-icon"
     .toppage-header__box__bottom
       .toppage-header__box__bottom__li
