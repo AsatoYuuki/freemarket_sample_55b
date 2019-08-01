@@ -1,6 +1,10 @@
 @import "./variable";
 @import "./mixin";
 
+.login-hidden{
+  display: none;
+};
+
 .kiyaku{
   text-decoration: none;
   color: $light_blue;
