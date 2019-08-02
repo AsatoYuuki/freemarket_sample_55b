@@ -31,6 +31,10 @@
   width: 200px;
 }
 
+.input-member-info{
+  color: $red;
+};
+
 .login-body{
   position: relative;
   min-height: 100%;
@@ -48,7 +52,7 @@
       height: 128px;
       display: flex;
       .progress-bar{
-        color: $black;
+        color: $button-gray;
         width: 100px;
         height:32px;
         box-sizing: border-box;
@@ -62,15 +66,16 @@
           font-size: 25px;
           width:12px;
           margin: auto;
-          z-index: 2;
+          z-index: 1;
+          position: relative;
           &__bars{
-            background-color:black;
+            background-color: $button-gray;
             width:97px;
             height: 2px;
-            position: relative;
+            position: absolute;
             bottom: 12px;
             left: 8px;
-            z-index: 1;
+            z-index: -1;
           }
         }
       }
