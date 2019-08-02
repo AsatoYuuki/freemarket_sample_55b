@@ -13,7 +13,6 @@ $(function(){
     $('.phone-body').removeClass('login-block');
     $('.phone-body').addClass('login-hidden'); //最初の画面をdisplay:noneにします。
     $('.address-body').addClass('login-block'); //次のページを表示させます
-
   });
 
   $('.btn-next-box').on('click', function(e){

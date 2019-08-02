@@ -6,10 +6,7 @@
   display: block;
 }
 
-.credit-body__container-2{
-  padding: 0 0 300px;
-  box-sizing: border-box;
-}
+
 
 .credit-body{
   position: relative;
@@ -19,10 +16,9 @@
   font-size: 14px;
   color: $black;
   line-height: 1; 
-  &__container {
+  &__container-2 {
     padding: 0 0 300px;
     box-sizing: border-box;
-    height: 100%;
     &__header{
       margin: auto;
       width: 700px;
@@ -79,7 +75,7 @@
         }
       }
     }
-  }
+  
 
 
 .credit-card-resistration-2{
@@ -160,5 +156,6 @@
     color:$white;
     background-color:$red ;
   }
+ }
 }
 }
