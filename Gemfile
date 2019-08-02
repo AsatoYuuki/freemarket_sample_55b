@@ -81,3 +81,12 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog-aws'
 gem "gretel"
+
+group :development, :test do
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'pry-doc'
+end
+
+gem 'gon'
+gem "jquery-rails"
