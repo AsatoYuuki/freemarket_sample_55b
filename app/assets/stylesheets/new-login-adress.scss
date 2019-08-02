@@ -6,10 +6,15 @@
   display: none;
 };
 
+.login-block{
+  display: block;
+}
+
 .form-group__arbitrarily{
   @include form-icon($pale_gray);
   padding: 3px 4px;
 }
+
 
 .angle-icon{
   -webkit-appearance: none;
@@ -18,7 +23,7 @@
   transform:translateX(210px) translateY(38px);
 }
 
-.login-body{
+.address-body{
   position: relative;
   min-height: 100%;
   background: #f5f5f5;
