@@ -2,74 +2,99 @@
   %nav.mypage-nav
     %ul.mypage-nav__list
       %li.side-bar__link-box
-        = link_to "マイページ", mypage_path, class:"side-links side-bar"
-        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+        = link_to mypage_path, class: "side-links" do
+          マイページ
+          %i.fa.fa-angle-right
       %li.side-bar__link-box
-        = link_to "お知らせ", "", class:"side-links side-bar"
-        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+        = link_to "", class: "side-links" do
+          お知らせ
+          %i.fa.fa-angle-right
       %li.side-bar__link-box
-        = link_to "やることリスト", "", class:"side-links side-bar"
-        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+        = link_to "", class: "side-links" do
+          やることリスト
+          %i.fa.fa-angle-right
       %li.side-bar__link-box
-        = link_to "いいね！一覧", "", class:"side-links side-bar"
-        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+        = link_to "", class: "side-links" do
+          いいね！一覧
+          %i.fa.fa-angle-right
       %li.side-bar__link-box
-        = link_to "出品する", sell_path, class:"side-links side-bar"
-        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+        = link_to sell_path, class: "side-links" do
+          出品する
+          %i.fa.fa-angle-right
       %li.side-bar__link-box
-        = link_to "出品した商品 - 出品中", "", class:"side-links side-bar"
-        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+        = link_to "", class: "side-links" do
+          出品した商品 - 出品中
+          %i.fa.fa-angle-right
       %li.side-bar__link-box
-        = link_to "出品した商品 - 取引中", "", class:"side-links side-bar"
-        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+        = link_to "", class: "side-links" do
+          出品した商品 - 取引中
+          %i.fa.fa-angle-right
       %li.side-bar__link-box
-        = link_to "出品した商品 - 売却済", "", class:"side-links side-bar"
-        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+        = link_to "", class: "side-links" do
+          出品した商品 - 売却済
+          %i.fa.fa-angle-right
       %li.side-bar__link-box
-        = link_to "購入した商品 - 過去の取引", "", class:"side-links side-bar"
-        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+        = link_to "", class: "side-links" do
+          購入した商品 - 過去の取引
+          %i.fa.fa-angle-right
       %li.side-bar__link-box
-        = link_to "ニュース一覧", "", class:"side-links side-bar"
-        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+        = link_to "", class: "side-links" do
+          ニュース一覧
+          %i.fa.fa-angle-right
       %li.side-bar__link-box
-        = link_to "評価一覧", "", class:"side-links side-bar"
-        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+        = link_to "", class: "side-links" do
+          評価一覧
+          %i.fa.fa-angle-right
       %li.side-bar__link-box
-        = link_to "ガイド", "", class:"side-links side-bar"
-        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+        = link_to "", class: "side-links" do
+          マイページ
+          %i.fa.fa-angle-right
       %li.side-bar__link-box
-        = link_to "お問い合わせ", "", class:"side-links side-bar"
-        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+        = link_to "", class: "side-links" do
+          お問い合わせ
+          %i.fa.fa-angle-right
+
     %h3.mypage-nav__head
       メルペイ
     %ul.mypage-nav__list
       %li.side-bar__link-box
-        = link_to "売り上げ・振り込み申請", "", class:"side-links side-bar"
-        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+        = link_to "", class: "side-links" do
+          売り上げ・振り込み申請
+          %i.fa.fa-angle-right
       %li.side-bar__link-box
-        = link_to "ポイント", "", class:"side-links side-bar"
-        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+        = link_to "", class: "side-links" do
+          ポイント
+          %i.fa.fa-angle-right
+        
     %h3.mypage-nav__head
       設定
     %ul.mypage-nav__list
       %li.side-bar__link-box
-        = link_to "プロフィール", mypage_profile_path, class:"side-links side-bar"
-        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+        = link_to mypage_profile_path, class: "side-links" do
+          プロフィール
+          %i.fa.fa-angle-right
       %li.side-bar__link-box
-        = link_to "発送元・お届け先住所変更", "", class:"side-links side-bar"
-        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+        = link_to "", class: "side-links" do
+          発送元・お届け先住所変更
+          %i.fa.fa-angle-right
       %li.side-bar__link-box
-        = link_to "支払い方法変更", mypage_card_path, class:"side-links side-bar"
-        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+        = link_to mypage_card_path, class: "side-links" do
+          支払い方法変更
+          %i.fa.fa-angle-right
       %li.side-bar__link-box
-        = link_to "メール/パスワード", "", class:"side-links side-bar"
-        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+        = link_to "", class: "side-links" do
+          メール/パスワード
+          %i.fa.fa-angle-right
       %li.side-bar__link-box
-        = link_to "本人情報", "", class:"side-links side-bar"
-        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+        = link_to "", class: "side-links" do
+          本人確認
+          %i.fa.fa-angle-right
       %li.side-bar__link-box
-        = link_to "電話番号の確認", "", class:"side-links side-bar"
-        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+        = link_to "", class: "side-links" do
+          電話番号の確認
+          %i.fa.fa-angle-right
       %li.side-bar__link-box
-        = link_to "ログアウト", mypage_logout_path, class:"side-links side-bar"
-        = fa_icon 'angle-right' ,class:"side-bar__angle-right angle-right fa-lg"
+        = link_to mypage_logout_path, class: "side-links" do
+          ログアウト
+          %i.fa.fa-angle-right
+
