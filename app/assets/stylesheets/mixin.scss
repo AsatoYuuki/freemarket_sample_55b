@@ -54,3 +54,16 @@
   background-color:$fColor;
   text-align: center;
 }
+@mixin category-list{
+  font-size: 12px;
+  display: block;
+  text-decoration: none;
+  color: $black;
+  background-color: $white;
+  line-height: 20px;
+  height:50px;
+  width:220px;
+  padding: 13px;
+  box-sizing: border-box;
+  z-index: 3;
+}
