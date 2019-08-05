@@ -45,7 +45,6 @@ $(function() {
     }).done(function(children) {
       children.forEach(function (child) {
         var html = buildGrandChildHTML(child);
-        console.log(html);
         $(".grand_children_list").append(html);
       })
       $(document).on("mouseover", ".child_category", function () {
