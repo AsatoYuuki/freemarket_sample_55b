@@ -1,0 +1,26 @@
+= render "shared/header"
+.second-header
+.category-index
+  .category-index__box
+    .category-index__text
+      カテゴリー一覧
+    - @parents.each do |parent|
+      = link_to "#{parent.name}", category_path(parent), class: "parent_select_box",id: "#{parent.id}"
+  .category-index__children
+  - @parents.each do |parent|
+    .category-each
+      .category-each__title
+        = parent.name
+      .category-each__children
+        - parent.children.each do |child|
+          .category-each__child-title
+            = child.name
+            %br
+            .category-each__children__between
+            - child.children.each do |child|
+              = link_to "#{child.name}", category_path(child), class: "category-each__children__list",id: "#{child.id}"
+            %br
+.toppage-footer__image
+  = image_tag 'mercari__footer.jpg', class: 'footer__image__pic', height: '260', width: '100%'
+= render "shared/footer"
+= render "shared/red-camera"

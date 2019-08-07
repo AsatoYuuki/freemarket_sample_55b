@@ -1,0 +1,47 @@
+.category-index{
+  background-color: $background_gray;
+  &__text{
+    padding-top:40px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  &__box{
+    width:700px;
+    margin: auto;
+  }
+  &__children{
+    margin-top: 50px;  
+  }
+}
+
+.category-each{
+  width:700px;
+  margin: auto;
+  &__title{
+    background-color: $red;
+    color: $white;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-bottom: 10px;
+  }
+  &__child-title{
+    margin-top: 20px;
+  }
+  &__children{
+    padding: 40px;
+    background-color: $white;
+    color:$black;
+    text-decoration: none;
+    &__between{
+      margin-top: 20px;
+      display: flex;
+    }
+    &__list{
+      color:$light_blue;
+      width: 300px;
+      display: inline-block;
+      text-decoration: none;
+    }
+  }
+}

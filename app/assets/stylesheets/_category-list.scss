@@ -66,3 +66,21 @@
   left:220px;
   z-index: 100;
 }
+
+.parent_select_box{
+  text-decoration: none;
+  font-size: 14x;
+  border-bottom: 2px gray;
+  border-right: 2px gray;
+  
+  margin: 5px;
+  padding: 5px 20px;
+  color:$black;
+  background-color:$white;
+  border-radius: 5px;
+  display: inline-block;
+  &:hover{
+    color:$white;
+    background-color: $red;
+  }
+}

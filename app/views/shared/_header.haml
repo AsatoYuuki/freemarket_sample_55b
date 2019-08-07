@@ -17,7 +17,7 @@
         %ul.toppage-header__box__bottom__li__left
           %li.toppage-header__box__bottom__li__left__li-search.append-categories
             = fa_icon 'list-ul', class: "search-icon-left append-categories"
-            = link_to "", class: "search-brand-category append-categories" do
+            = link_to category_index_path, class: "search-brand-category append-categories" do
               カテゴリーから探す
           %li.toppage-header__box__bottom__li__left__li-search
             = fa_icon 'tag', class: "search-icon-left"
