@@ -1,0 +1,153 @@
+#wall-o
+  = render "shared/header"
+  .wallpaper-hatakeyama
+    .item-box
+      %h1.heading 
+        = @item.name
+      .main-container-hatapon
+        .main-container-hatapon--left
+          .main-container-hatapon--left--big
+            = image_tag "/assets/avator.png", class: "photo-screen"
+          .main-container-hatapon--left--small
+            - @item.images.each do |image|
+              .main-container-hatapon--left--small__1
+                = image_tag "#{image.url}", class: "photo-screen"
+              //@item.images.each_with_index |
+        %table.main-container-hatapon--right
+          %tr.main-container-hatapon--right--wide
+            %th.main-container-hatapon--right--wide__question 出品者
+            %td.main-container-hatapon--right--wide__value
+              //user のp路フィールに飛ばす
+              = link_to  "", class: "table-a sender-name" do
+                %p 
+                  = @item.user.nickname
+              .main-container-hatapon--right--wide__value__face-number
+                = fa_icon "smile-o", class: "main-container--right--wide__value__face-number--good"
+                %span.main-container-hatapon--right--wide__value__face-number__number 12
+              .main-container-hatapon--right--wide__value__face-number
+                = fa_icon "meh-o", class: "main-container--right--wide__value__face-number--normal"
+                %span.main-container-hatapon--right--wide__value__face-number__number 12
+              .main-container-hatapon--right--wide__value__face-number
+                = fa_icon "frown-o", class: "main-container--right--wide__value__face-number--bad"
+                %span.main-container-hatapon--right--wide__value__face-number__number 120             
+          %tr.main-container-hatapon--right--wide
+            %th.main-container-hatapon--right--wide__question カテゴリー
+            %td.main-container-hatapon--right--wide__value
+              = link_to "メンズ", "", class:"table-a classification"
+              = link_to "", class: "table-a classification" do
+                = fa_icon "arrow-right"
+                %span トップス
+              = link_to "", class: "table-a classification" do
+                = fa_icon "arrow-right"
+                %span カットソー
+          %tr.main-container-hatapon--right--wide
+            %th.main-container-hatapon--right--wide__question ブランド
+            %td.main-container-hatapon--right--wide__value
+              = link_to "NASA", "", class: "table-a"
+          - if @item.size.present?
+            %tr.main-container-hatapon--right--wide
+              %th.main-container-hatapon--right--wide__question 商品のサイズ
+              %td.main-container-hatapon--right--wide__value 
+                = @item.size
+          %tr.main-container-hatapon--right--wide
+            %th.main-container-hatapon--right--wide__question 商品の状態
+            %td.main-container-hatapon--right--wide__value 
+              = @item.condition
+          %tr.main-container-hatapon--right--wide
+            %th.main-container-hatapon--right--wide__question 配送料の負担
+            %td.main-container-hatapon--right--wide__value 
+              = @item.send_cost
+          %tr.main-container-hatapon--right--wide
+            %th.main-container-hatapon--right--wide__question 配送の方法
+            %td.main-container-hatapon--right--wide__value 
+              = @item.send_method
+          %tr.main-container-hatapon--right--wide
+            %th.main-container-hatapon--right--wide__question 配送元地域
+            %td.main-container-hatapon--right--wide__value 
+              = @item.send_place
+          %tr.main-container-hatapon--right--wide
+            %th.main-container-hatapon--right--wide__question 発送日の目安
+            %td.main-container-hatapon--right--wide__value 
+              = @item.send_day
+      .price-box
+        %span.price-box__number 
+          = "¥#{@item.price}" 
+        %span.price-box__tax (税込)
+        %span.price-box__send-tax 送料込み
+      = link_to "購入画面に進む", "", class: "red-button"
+      %p.item-description 
+        = @item.content
+      .button-zones
+        .button-zones--left
+          %button.button-zones--left__report
+            = fa_icon "heart-o"
+            %span いいね! 3
+          %button.button-zones--left__report
+            = fa_icon "flag-o"
+            %span 不適切な商品の報告
+        = link_to "", class:"button-zones--right" do
+          =fa_icon "lock" 
+          %span あんしん・あんぜんへの取り組み
+    .message-box   
+      %p.message-box__warning 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+      %textarea.message-box__input
+      = link_to "コメントする", "", class: "message-box__submit"
+    .history-of-items
+      .history-of-items__past
+        = link_to "",  class: "bow-side" do
+          = fa_icon "arrow-left"
+          %span aaaa
+      .history-of-items__feuture
+        = link_to "",  class: "bow-side" do
+          %span bbb
+          = fa_icon "arrow-right"
+    .social-box
+      %ul.social-box__icons
+        %li.social-box__icons__icon
+          = link_to "", class: "medias" do
+            = fa_icon "facebook", class: "media-button facebook-button"
+        %li.social-box__icons__icon
+          = link_to "", class: "medias" do
+            = fa_icon "twitter", class: "media-button twitter-button"
+        %li.social-box__icons__icon
+          = link_to "", class: "medias" do
+            %p.media-button.line-button Line
+        %li.social-box__icons__icon
+          = link_to "", class: "medias" do
+            = fa_icon "pinterest", class: "media-button pinterest-button" 
+    .others-item-box
+      .same-item
+        = link_to "", class: "same-item__name" do
+          %p
+            = "#{@item.user.nickname}さんの他の出品"
+        
+        - @item.user.items.each do |item|
+          - if item != @item
+            .same-item__box
+              = link_to item_path(item.id), class: "same-item__box__individual" do
+                .same-item__box__individual__photo
+                  = image_tag "#{item.images.first.url}", class: "photo-screen"
+                .same-item__box__individual__text-box
+                  %p.same-item__box__individual__text-box__name 
+                    = item.name
+                  %p.same-item__box__individual__text-box__price 
+                    = item.price
+                
+        
+      .same-item
+        = link_to "同じブランドの商品", "", class: "same-item__name" 
+        .same-item__box
+          = link_to "", class: "same-item__box__individual" do
+            .same-item__box__individual__photo
+              = image_tag "/assets/avator.png", class: "photo-screen"
+            .same-item__box__individual__text-box
+              %p.same-item__box__individual__text-box__name aaaa
+              %p.same-item__box__individual__text-box__price ¥12,300
+              //部分テンプレ
+        .same-item__box
+          = link_to "", class: "same-item__box__individual" do
+            .same-item__box__individual__photo
+              = image_tag "/assets/avator.png", class: "photo-screen"
+            .same-item__box__individual__text-box
+              %p.same-item__box__individual__text-box__name aaaa
+              %p.same-item__box__individual__text-box__price ¥12,300
