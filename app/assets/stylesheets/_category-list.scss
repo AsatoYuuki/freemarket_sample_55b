@@ -1,0 +1,86 @@
+.category_list{
+  position: absolute;
+  display: flex;
+  left:250px;
+  z-index: 100;
+}
+
+.parent_category{
+  @include category-list;
+}
+
+.child_category{
+  @include category-list;
+}
+
+.grand_child_category{
+  @include category-list;
+  &:hover{
+    color: $white;
+    background-color: $button-gray;
+    font-weight: bold;
+  }
+}
+
+.item-categories{
+  background-color:$white ;
+  border-right: 1px solid $black;
+  border-left: 1px solid $black;
+  border-bottom: 1px solid $black;
+}
+
+.hidden-categories{
+  display:none;
+}
+
+.now-selected-red{
+  font-weight: bold;
+  color: $white;
+  background-color: $red;
+}
+
+.now-selected-gray{
+  font-weight: bold;
+  color: $white;
+  background-color: $button-gray;
+}
+
+.category-delete-area{
+  width: 200px;
+  height:10px;
+  box-sizing: border-box;
+  position: absolute;
+  display: flex;
+  top: 50px;
+  left:220px;
+  z-index: 100;
+}
+
+.category-delete-are-side{
+  width: 20px;
+  height:100px;
+  box-sizing: border-box;
+  position: absolute;
+  display: flex;
+  top: 50px;
+  left:220px;
+  z-index: 100;
+}
+
+.parent_select_box{
+  text-decoration: none;
+  font-size: 14x;
+  border-bottom: 2px gray;
+  border-right: 2px gray;
+  
+  margin: 5px;
+  padding: 5px 20px;
+  color:$black;
+  background-color:$white;
+  border-radius: 5px;
+  display: inline-block;
+  &:hover{
+    color:$white;
+    background-color: $red;
+  }
+}

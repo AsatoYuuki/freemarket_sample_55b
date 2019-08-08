@@ -5,21 +5,23 @@
         = link_to do
           = image_tag 'main-logo.png', height: '52', width: '167'
       .toppage-header__box__top__right
-        .toppage-header__box__top__right__search
-          %input{type: "search", class: "search", placeholder: "何かお探しですか？" }
-        .toppage-header__box__top__right__icon
-          = link_to "", class: "search-icon-link" do
-            = fa_icon 'search', class: "search-icon"
+        = form_with url: search_index_path, class:'buy-form',method: :get, local: true do|f|
+          .toppage-header__box__top__right__search
+            = f.text_field :search,class: "search", placeholder: "何かお探しですか？"
+          %label
+            .toppage-header__box__top__right__icon
+              = f.submit 
+              = fa_icon 'search', class: "search-icon"
     .toppage-header__box__bottom
       .toppage-header__box__bottom__li
         %ul.toppage-header__box__bottom__li__left
-          %li.toppage-header__box__bottom__li__left__li-search
-            = fa_icon 'list-ul', class: "search-icon-left"
-            = link_to "", class: "search-brand-category" do
+          %li.toppage-header__box__bottom__li__left__li-search.append-categories
+            = fa_icon 'list-ul', class: "search-icon-left append-categories"
+            = link_to category_index_path, class: "search-brand-category append-categories" do
               カテゴリーから探す
           %li.toppage-header__box__bottom__li__left__li-search
             = fa_icon 'tag', class: "search-icon-left"
-            = link_to "", class: "search-brand-category" do
+            = link_to "", class: "search-brand-category append-ctegories" do
               ブランドから探す
 
         -# #ログインしている場合
@@ -43,10 +45,22 @@
         -#       マイページ
 
         -# #ログインしていない場合
-        %ul.toppage-header__box__bottom__li__right2
-          %li.toppage-header__box__bottom__li__right2__signup
-            = link_to new_users_path, class: "toppage-header__box__bottom__li__right2__signup__icon" do
-              新規会員登録
-          %li.toppage-header__box__bottom__li__right2__login
-            = link_to new_user_session_path, class: "toppage-header__box__bottom__li__right2__login__icon" do
-              ログイン
+        -# %ul.toppage-header__box__bottom__li__right2
+        -#   %li.toppage-header__box__bottom__li__right2__signup
+        -#     = link_to "", class: "toppage-header__box__bottom__li__right2__signup__icon" do
+        -#       新規会員登録
+        -#   %li.toppage-header__box__bottom__li__right2__login
+        -#     = link_to "", class: "toppage-header__box__bottom__li__right2__login__icon" do
+        -#       ログイン
+
+
+-# カテゴリ検索のためのビュー(8/5追加)
+.category_list.item-categories
+  .parents_list.hidden-categories
+    - @parents.each do |parent|
+      = link_to "#{parent.name}", category_path(parent), class: "parent_category",id: "#{parent.id}"
+  .children_list
+  .grand_children_list
+
+.category-delete-area
+.category-delete-are-side
