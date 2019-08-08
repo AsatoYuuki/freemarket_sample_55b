@@ -1,8 +1,17 @@
 @import "variable";
 @import "variable_icon";
+
+*{
+  box-sizing: border-box;
+}
+
+#wall-o
+{
+  
+}
 .wallpaper-hatakeyama{
+  overflow: hidden;
   background-color: $background_gray;
-  min-height: 100%;
   line-height: 1;
   font-size: 14px;
   color: $black;
@@ -22,7 +31,7 @@
     text-align: center;
     line-height: 1,4;
   }
-  .main-container{
+  .main-container-hatapon{
     margin: 16px 0 0;
     overflow: hidden;
     &--left{
@@ -244,14 +253,14 @@
     }
     &__box{
       display: inline-block;
-      width: 220px;
+      width: 210px;
       margin: 0 20px 20px 0;
       background-color: $white;
       &__individual{
         text-decoration: none;
         color: $black;
         &__photo{
-          width: 220px;
+          width: 210px;
           height: 220px;
         }
         &__text-box{
