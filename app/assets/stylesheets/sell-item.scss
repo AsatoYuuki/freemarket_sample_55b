@@ -43,7 +43,7 @@
 
         &__upload-box{
           width: 620px;
-          padding: 40px;
+          padding: 40px 40px 0 40px;
           margin: 0;
           border-bottom: solid 1px $background_gray;
 
@@ -79,6 +79,17 @@
             &__text{
 
             }
+          }
+          #reset-switch{
+            margin: 20px auto;
+            text-align: center;
+            width: 120px;
+            font-size: 14px;
+            font-family: monospace,monospace;
+            border: dashed 1px #ccc;
+            height: 30px;
+            line-height: 30px;
+
           }
         }
       }
@@ -342,3 +353,17 @@
     }
   }
 }
+
+.pic-man{
+  height: 100%;
+}
+
+.kumogakure{
+  display: none;
+}
+
+.top-heigter{
+  height: 162px;
+  width:100%;
+}
+

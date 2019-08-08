@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   end
   resources :items, only: [:show]
 
-  resource :sell do
+  resources :sells 
+
+  resource :users do
   end
 end
