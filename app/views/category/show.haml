@@ -1,0 +1,25 @@
+= render "shared/header"
+.second-header
+.second-header__box.bread-box
+  .category-breads
+    = link_to "メルカリ",root_path, class:"category-breads__links"
+    = fa_icon 'angle-right' ,class:"category-breads__icon"
+    = link_to "カテゴリ一覧",category_index_path ,class:"category-breads__links"
+    = fa_icon 'angle-right' ,class:"category-breads__icon"
+    - if @category.ancestors?
+      - @category.ancestors.ids.each do |id|
+        = link_to "#{Category.find(id).name}" ,category_path(id) ,class:"category-breads__links"
+        = fa_icon 'angle-right' ,class:"category-breads__icon"
+    .category-breads__selected
+      = @category.name 
+.category-show
+  .category-show__title
+    = @category.name + "の商品一覧"
+  .category-show__results
+    
+-# ここに検索結果の一覧を表示
+
+.toppage-footer__image
+  = image_tag 'mercari__footer.jpg', class: 'footer__image__pic', height: '260', width: '100%'
+= render "shared/footer"
+= render "shared/red-camera"
