@@ -15,7 +15,7 @@ $(function(){
     //console.log(formData) 
     $(".select-selecter2").remove();
     $(".select-selecter3").remove();
-    $(this).parent().parent().parent().append('<select class = "select-wrap__holde select-selecter2"></select>');
+    $(this).parent().parent().append('<div class = "select-wrap"> <i class = "select-wrap__icon"><i class="fa fa-angle-down"></i></i> <select class = "select-wrap__holder select-selecter2"></select></div>');
     
      
     
@@ -43,7 +43,7 @@ $(function(){
   $(document).on("change", ".select-selecter2", function(){
     var formData = $(this).val(); //FormDataでも試す
     $(".select-selecter3").remove();
-    $(this).parent().append('<select class = "select-selecter3"></select>');
+    $(this).parent().parent().append('<div class = "select-wrap"> <i class = "select-wrap__icon"><i class="fa fa-angle-down"></i></i> <select class = "select-wrap__holder select-selecter3"></select></div>');
      
     
 

@@ -16,19 +16,39 @@
                 %p.sell-form__upload-box__text
                   最大10枚までアップロードできます
                 .sell-form__upload-box__image-upload
-                  = f.fields_for :images do |i|
-                    = f.label :images_attributes_0_url, class: "top-heigter" do
-                      .pic-man                       
-                        %p.sell-form__upload-box__image-upload__text
-                        クリックしてファイルをアップロード
-                      = i.file_field :url, class: "kumogakure"
-                                       
-                    -# %p.sell-form__upload-box__image-upload__text
-                    -#   ドラックアンドドロップ
-                    -# %p.sell-form__upload-box__image-upload__text
-                    -#   またはクリックしてファイルをアップロード
-                %p#reset-switch 画像
+                  .preview-open
+                  .click-point{data: {id: 1}}
+                    = f.fields_for :images do |i|
+                      = f.label :images_attributes_0_url, class: "top-heigter" do
+                        .pic-man                       
+                          %p.sell-form__upload-box__image-upload__text クリックしてファイルをアップロード    
+                        = i.file_field :url, class: "kumogakure pic-gone"
+                  .click-point.kumogakure{data: {id: 2}}
+                    = f.fields_for :images do |i|
+                      = f.label :images_attributes_1_url, class: "top-heigter" do
+                        .pic-man                       
+                          %p.sell-form__upload-box__image-upload__text クリックしてファイルをアップロード    
+                        = i.file_field :url, class: "kumogakure pic-gone"
+                  .click-point.kumogakure{data: {id: 3}}
+                    = f.fields_for :images do |i|
+                      = f.label :images_attributes_2_url, class: "top-heigter" do
+                        .pic-man                       
+                          %p.sell-form__upload-box__image-upload__text クリックしてファイルをアップロード    
+                        = i.file_field :url, class: "kumogakure pic-gone"
+                  .click-point.kumogakure{data: {id: 4}}
+                    = f.fields_for :images do |i|
+                      = f.label :images_attributes_3_url, class: "top-heigter" do
+                        .pic-man                       
+                          %p.sell-form__upload-box__image-upload__text クリックしてファイルをアップロード    
+                        = i.file_field :url, class: "kumogakure pic-gone" 
+                  .click-point.kumogakure{data: {id: 5}}
+                    = f.fields_for :images do |i|
+                      = f.label :images_attributes_4_url, class: "top-heigter" do
+                        .pic-man                       
+                          %p.sell-form__upload-box__image-upload__text クリックしてファイルをアップロード    
+                        = i.file_field :url, class: "kumogakure pic-gone"  
 
+                
             .sell-box__content
               .content-item
                 %label.content-item__name.item
@@ -96,6 +116,21 @@
                       %i.select-wrap__icon
                         = fa_icon 'angle-down'
                       = f.collection_select :send_cost, Cost.all, :id, :name, {prompt: "--"},{class: "select-wrap__holder"}
+                  #send_m
+                    %label.form-box-right__info__text
+                      配送方法
+                      %span.form-box-right__info__text__require.icon
+                        必須
+                    .select-holder
+                      .select-wrap
+                        %i.select-wrap__icon
+                          = fa_icon 'angle-down'
+                        = f.collection_select :send_method, Post.all, :id, :name, {prompt: "--"},{class: "select-wrap__holder"}
+
+
+
+
+
                 .form-box-right__info
                   %label.form-box-right__info__text
                     発送元の地域
