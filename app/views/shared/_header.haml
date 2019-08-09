@@ -23,8 +23,8 @@
             = fa_icon 'tag', class: "search-icon-left"
             = link_to "", class: "search-brand-category append-ctegories" do
               ブランドから探す
-
-        -# #ログインしている場合
+        
+      - if user_signed_in?
         %ul.toppage-header__box__bottom__li__right
           %li.toppage-header__box__bottom__li__right__iine
             = link_to "", class: "iine-message-todo" do
@@ -43,15 +43,14 @@
             = image_tag 'avator.png', class: 'gotomypage-icon', height: '32', width: '32'
             = link_to mypage_path, class: "gotomypage" do
               マイページ
-
-        -# #ログインしていない場合
-        -# %ul.toppage-header__box__bottom__li__right2
-        -#   %li.toppage-header__box__bottom__li__right2__signup
-        -#     = link_to "", class: "toppage-header__box__bottom__li__right2__signup__icon" do
-        -#       新規会員登録
-        -#   %li.toppage-header__box__bottom__li__right2__login
-        -#     = link_to "", class: "toppage-header__box__bottom__li__right2__login__icon" do
-        -#       ログイン
+      - else
+        %ul.toppage-header__box__bottom__li__right2
+          %li.toppage-header__box__bottom__li__right2__signup
+            = link_to new_login_signup_index_path, class: "toppage-header__box__bottom__li__right2__signup__icon" do
+              新規会員登録
+          %li.toppage-header__box__bottom__li__right2__login
+            = link_to new_user_session_path, class: "toppage-header__box__bottom__li__right2__login__icon" do
+              ログイン
 
 
 -# カテゴリ検索のためのビュー(8/5追加)

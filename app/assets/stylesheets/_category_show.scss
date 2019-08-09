@@ -1,0 +1,38 @@
+.category-show{
+  background-color:$background_gray;
+  &__title{
+    font-weight: bold;
+    font-size:20px;
+    color:$black;
+    width:1020px;
+    margin: auto;
+  }
+  &__results{
+    width: 1020px;
+    margin: auto;
+  }
+}
+
+.category-breads{    
+  width: 990px;
+  margin: auto;
+  line-height: 25px;
+  &__links{
+    text-decoration: none;
+    color: $black;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  &__icon{
+    margin:0 ５px;
+  }
+  &__selected{
+    display: inline;
+    font-weight: bold;
+  }
+}
+
+.bread-box{
+  border-top:solid,1px,$black;
+}

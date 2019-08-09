@@ -1,5 +1,14 @@
 @import "variable.scss";
 
+.login-hidden{
+  display: none;
+};
+
+
+.login-block{
+  display: block;
+}
+
 .sns-icon{
   position: absolute;
   top: 50%;
@@ -21,8 +30,9 @@
   color: $black;
   line-height: 1; 
   &__container {
-    padding: 0 0 300px;
+    padding: 0 0 340px;
     box-sizing: border-box;
+    height: 100%;
     &__header{
       text-align: center;
       height: 128px;
