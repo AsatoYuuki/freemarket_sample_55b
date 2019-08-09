@@ -14,7 +14,7 @@
             .mypage-user-icon__image
               = image_tag "avator.png" , width:70, height:70, class:"image"
             %h2.mypage-user-icon__name
-              メルメルさん
+              = current_user.nickname
           .mypage-number
             .mypage-number__gedgement
               評価
