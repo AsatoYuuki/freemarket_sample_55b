@@ -12,6 +12,13 @@ Rails.application.routes.draw do
   resource :sell do
   end
 
-  resource :users do
+  resources :signup do
+    collection do
+      get 'new_login'
+      get 'login_menber_information'
+      get 'login_phone_number'
+      get 'new_login_adress' # ここで、入力の全てが終了する
+      get 'new_login_complete' # 登録完了後のページ
+    end
   end
 end
