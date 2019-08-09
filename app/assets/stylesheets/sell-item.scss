@@ -369,16 +369,7 @@ select {
   }
   ::-ms-expand {	/* select要素のデザインを無効にする（IE用） */
   display: none;
-  }
-
-// .select-selecter2{
-//   margin-top: 10px;
-// }
-
-// .select-selecter3{
-//   margin-top: 10px;
-// }
-
+}
 
 //ここからプレビュー用
 .pic-man{
@@ -389,8 +380,6 @@ select {
   display: none;
 }
 
-
-
 #send_m{
   margin-top: 10px;
 }
@@ -400,8 +389,6 @@ select {
   position: absolute;
   bottom: 0;
   width: 100%;
-  
-
 }
 
 .previews{

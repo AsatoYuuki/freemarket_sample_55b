@@ -1,19 +1,4 @@
 $(function(){
-  //なぜかこちらが動かない
-  // $(".pic-gone").on("change", function(event){
-   
-    
-  //   var file = event.target.files[0];
-  //   var reader = new FileReader();
-  //   //console.log("aaaaa")
-  //   reader.onload = function(event){
-  //     console.log(event.target.result)
-  //     $(".sell-form__upload-box__image-upload").append(`<div class = "previews" data-p-id = "${samer}"></div>`);
-  //   }
-
-  // });
-
-
   $('.pic-gone').on('change', function (e) {
     $(this).parents(".click-point").addClass("kumogakure");
     $('.pic-gone').each(function(){
@@ -25,12 +10,7 @@ $(function(){
     var samer = $(this).parents(".click-point").data("id");
     var reader = new FileReader();
     reader.onload = function (e) {
-      console.log("aaaaaaa")
-
-      
-      console.log(samer)
       $(".preview-open").append(`<div class = "previews" data-id = ${samer}><img class ="open-pic" id = "same${samer}" src = ""><a class= "kill-me" href ="" >削除</a></div>`);
-      //$(".open-pic").attr("src",e.target.result );
       if (samer == 1){
         $("#same1").attr("src", e.target.result);
       }
@@ -56,11 +36,9 @@ $(function(){
     e.preventDefault();
     var killTarget = $(this).parent();
     var killPoint = $(killTarget).data("id");
-    console.log(killPoint)
     $(killTarget).remove();
     $(".pic-gone").each(function(){
       if ($(this).parents(".click-point").data("id") == killPoint) {
-        console.log("bbbbbbb")
         $(this).val("");
         $(this).parents(".click-point").siblings(".click-point").addClass("kumogakure");
         $(this).parents(".click-point").removeClass("kumogakure");

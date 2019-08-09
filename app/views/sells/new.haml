@@ -46,9 +46,7 @@
                       = f.label :images_attributes_4_url, class: "top-heigter" do
                         .pic-man                       
                           %p.sell-form__upload-box__image-upload__text クリックしてファイルをアップロード    
-                        = i.file_field :url, class: "kumogakure pic-gone"  
-
-                
+                        = i.file_field :url, class: "kumogakure pic-gone"              
             .sell-box__content
               .content-item
                 %label.content-item__name.item
@@ -86,9 +84,7 @@
                         - @category.each do |parent|
                           %option.parent_ca{value: parent.id}
                             = parent.name
-                      //=f.collection_select :name,  @category, :id, :name, class: "select-wrap__holder"
                       = f.hidden_field :category_id, class: "hidden-gone"
-                      //仮置き category_に変える
                 .form-box-right__info
                   %label.form-box-right__info__text
                     商品の状態
@@ -126,11 +122,6 @@
                         %i.select-wrap__icon
                           = fa_icon 'angle-down'
                         = f.collection_select :send_method, Post.all, :id, :name, {prompt: "--"},{class: "select-wrap__holder"}
-
-
-
-
-
                 .form-box-right__info
                   %label.form-box-right__info__text
                     発送元の地域
@@ -151,7 +142,6 @@
                       %i.select-wrap__icon
                         = fa_icon 'angle-down'
                       = f.collection_select :send_day, Day.all, :id, :name, {prompt: "--"}, {class: "select-wrap__holder"}
-                      //%input.select-wrap__holder{placeholder:"--"}
             .sell-box__content.show-item
               .form-box
                 %h3.form-box__sub-head
@@ -169,9 +159,7 @@
                     .price-box-right
                       .sell-price-input
                         ¥
-                      = f.text_field :price, class: "sell-price-input__box", placeholder: "例) 300"
-                      //%input.sell-price-input__box{placeholder:"例）300"}
-                      
+                      = f.text_field :price, class: "sell-price-input__box", placeholder: "例) 300"                      
                 .form-box-right__input
                   .left.fee
                     販売手数料(10%)
@@ -199,8 +187,7 @@
                     %a.text__conf__link
                       加盟店規約
                     に同意したことになります。
-                  = f.submit "出品する", class: "text__submit-button"
-                    
+                  = f.submit "出品する", class: "text__submit-button"                    
                 = link_to mypage_path,class:"return-button" do
                   %button.text__submit-button-return
                     もどる
