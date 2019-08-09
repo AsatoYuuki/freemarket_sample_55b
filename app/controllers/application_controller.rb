@@ -18,23 +18,7 @@ class ApplicationController < ActionController::Base
   end
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname])
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:family_name])
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name])
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:family_name_kana])
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name_kana])
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:cellphone_number])
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:profile])
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:image])
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:birthday_year])
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:birthday_month])
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:birthday])
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:post_number])
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:prefecture])
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:city])
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:address])
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:building_name])
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:phone_number])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname, :family_name, :first_name, :family_name_kana, :first_name_kana, :cellphone_number, :profile, :image, :birthday_year, :birthday_month, :birthday, :post_number, :prefecture, :city, :address, :building_name, :phone_number])
   end
 
   def set_parents
