@@ -2,14 +2,6 @@
 @import "variable";
 
 
-.login-hidden{
-  display: none;
-};
-
-.login-block{
-  display: block;
-}
-
 .form-group__arbitrarily{
   @include form-icon($pale_gray);
   padding: 3px 4px;
@@ -197,4 +189,3 @@
       }
     }
   }
-
