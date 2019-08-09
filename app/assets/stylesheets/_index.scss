@@ -26,7 +26,6 @@
         position: relative;
         margin-top: 8px;
         box-sizing: border-box;
-
         .buy-form{
           width: 100%;
         }
@@ -55,7 +54,6 @@
           .search-icon-link{
             color: $black;
           };
-
           input{
             display: none;
           }
@@ -104,7 +102,7 @@
           align-items: center;
           position: absolute;
           right: 3.8%;
-          height: 44px;
+          height: 54px;
           width: 45%;
           &__iine{
             width: 133px;
@@ -126,7 +124,7 @@
               margin-left: 8px;
             };
             .gotomypage{
-              top: 12px;
+              top: 17px;
               position: absolute;
               text-decoration: none;
               margin-left: 10px;
@@ -157,7 +155,7 @@
         &__right2{
           display: flex;
           align-items: center;
-          height: 44px;
+          height: 54px;
           &__signup{
             height: 32px;
             width: 106px;

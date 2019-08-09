@@ -6,7 +6,7 @@
         .main__box__no-login
           %p.main__box__no-login__text
             アカウントをお持ちでない方はこちら
-          = link_to new_user_registration_path, class: 'link-three' do
+          = link_to login_menber_information_signup_index_path, class: 'link-three' do
             .main__box__no-login__box
               新規会員登録
         .main__box__form-inner
@@ -20,13 +20,15 @@
               Googleで登録する
         .main__box__form-box
           .main__box-inner
-            %input.main__box-inner__input-mail{placeholder: "メールアドレス"}
-            %input.main__box-inner__input-password{placeholder: "パスワード"}
-            .kaiin-body__main__box__inner__contents__robot
-              %select.kaiin-body__main__box__inner__contents__robot__box 
-            %submit.main__box-inner__btm 
-              ログイン
-            .main__box-inner__information
-              %p.main__box-inner__text-box
-                = link_to 'パスワードをお忘れの方', '' , class: 'kiyaku' 
+            = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+              %span
+                = f.email_field :email, autofocus: true, placeholder: "メールアドレス", class: "main__box-inner__input-mail"
+              %span
+                = f.password_field :password, placeholder: "パスワード", class: "main__box-inner__input-password"
+              .main__box__inner__contents__robot
+                %select.main__box__inner__contents__robot__box
+                = f.submit "ログイン", class: 'main__box-inner__btm'
+              .main__box-inner__information
+                %p.main__box-inner__text-box
+                  = link_to 'パスワードをお忘れの方', '' , class: 'kiyaku' 
     = render "shared/footer-log"
