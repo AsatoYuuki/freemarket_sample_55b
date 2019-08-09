@@ -17,7 +17,6 @@ class SellsController < ApplicationController
   end
 
   def create
-    #binding.pry
     Item.create(create_params)
     redirect_to root_path
   end
@@ -31,7 +30,7 @@ class SellsController < ApplicationController
   private
 
   def category_set
-    @category = Category.where(ancestry: nil) #なぜ Category.where("ancestry = ?", nil)だと取得できないかチェック
+    @category = Category.where(ancestry: nil) 
   end
 
   def create_params

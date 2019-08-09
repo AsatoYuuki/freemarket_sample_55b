@@ -25,9 +25,7 @@ $(function(){
       }
       else {
         $("#same5").attr("src", e.target.result);
-      }
-      
-      
+      }      
     }
     reader.readAsDataURL(e.target.files[0]);
 
@@ -42,8 +40,6 @@ $(function(){
         $(this).val("");
         $(this).parents(".click-point").siblings(".click-point").addClass("kumogakure");
         $(this).parents(".click-point").removeClass("kumogakure");
-
-
       }
     });
   });
