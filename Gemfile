@@ -80,6 +80,7 @@ gem 'ancestry'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog-aws'
+gem 'devise'
 gem "gretel"
 
 group :development, :test do
