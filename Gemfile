@@ -90,3 +90,4 @@ end
 
 gem 'gon'
 gem "jquery-rails"
+gem 'ransack'
