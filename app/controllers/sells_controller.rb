@@ -34,7 +34,7 @@ class SellsController < ApplicationController
   end
 
   def create_params
-    params.require(:item).permit(:name, :content, :price, :size, :condition, :send_cost, :send_method, :send_place, :send_day, :buyer_id, :status, :brand_id, :category_id, images_attributes: [:url]).merge(user_id: 1)
+    params.require(:item).permit(:name, :content, :price, :size, :condition, :send_cost, :send_method, :send_place, :send_day, :buyer_id, :status, :brand_id, :category_id, images_attributes: [:url]).merge(user_id: current_user.id)
   end
   
 
