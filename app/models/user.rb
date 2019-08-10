@@ -6,7 +6,7 @@ class User < ApplicationRecord
   mount_uploader :image, ImageUploader
   
   has_many :items
-
+  has_many :cards
   validates :nickname, {presence: true, uniqueness: true}
   validates :family_name, {presence: true}
   validates :first_name, {presence: true}
