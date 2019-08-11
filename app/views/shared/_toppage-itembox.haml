@@ -4,7 +4,7 @@
     = link_to item_path(item.id), class: "item-box-contents__items-box__name" do
       .item-box-contents__items-box__photo
         //下のコメントアウトは本番環境で商品画像が投稿できるようになったら外してください
-        //= image_tag "#{item.images.first.url}", class: 'toppage-item-pic', height: '213', width: '213'
+        //= image_tag "#{item.images.first.url}", class: 'toppage-item-pic'
       .item-box-contents__items-box__body
         .item-box-contents__items-box__body__name
           = item.name
