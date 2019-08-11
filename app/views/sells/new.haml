@@ -75,7 +75,7 @@
                     カテゴリー
                     %span.form-box-right__info__text__require.icon
                       必須
-                  .select-holder
+                  .select-holder#higher
                     .select-wrap
                       %i.select-wrap__icon
                         = fa_icon 'angle-down'
@@ -84,7 +84,11 @@
                         - @category.each do |parent|
                           %option.parent_ca{value: parent.id}
                             = parent.name
-                      = f.hidden_field :category_id, class: "hidden-gone"
+                    .select-wrap.kumogakure#truth_ca
+                      %i.select-wrap__icon
+                        = fa_icon 'angle-down'
+                      = f.collection_select :category_id, Cost.all, :id, :name, {prompt: "--"}, {class: "select-wrap__holder select-selecter3"}
+                      //category_idが1から2番は弾くようにバリデーションする
                 .form-box-right__info
                   %label.form-box-right__info__text
                     商品の状態
