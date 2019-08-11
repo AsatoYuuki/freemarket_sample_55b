@@ -1,0 +1,22 @@
+-# localオプションで変数をitemに渡してください
+-# 使用例です。
+-#  = render 'shared/search-item' ,item: @test
+
+-# sold-flagは売約済みか否かを示す部分です。
+-# 画像投稿機能の実装が済みましたらimagetag""内にその商品の画像を持ってくる部分を追記してください
+
+.itemsearch-box
+  - if item.buyer_id != nil
+    .sold-flag  
+    .sold-flag__text
+      sold 
+  = link_to item_path(item.id) ,class: "itemsearch-box__link" do
+    = image_tag "",class:"itemsearch-box__picture"
+    .itemsearch-box__discription
+      = item.name
+      .itemsearch-box__discription__info
+        .itemsearch-box__discription__price
+          ¥
+          = item.price
+        .itemsearch-box__discription__like
+          = fa_icon 'heart-o', class:'heart'
