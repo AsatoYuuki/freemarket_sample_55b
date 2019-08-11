@@ -12,8 +12,7 @@ Rails.application.routes.draw do
 
   resources :sells 
 
-  resource :users do
-  end
+  resource :users 
 
   resources :signup do
     collection do
