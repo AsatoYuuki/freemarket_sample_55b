@@ -5,14 +5,11 @@ $(function(){
     return option;
   }
 
-  
-
-  
   $(".select-selecter").on("change", function(){
     var formData = $(this).val(); 
-    $(".select-selecter2").remove();
-    $(".select-selecter3").remove();
-    $(this).parent().parent().append('<div class = "select-wrap"> <i class = "select-wrap__icon"><i class="fa fa-angle-down"></i></i> <select class = "select-wrap__holder select-selecter2"></select></div>');
+    $("#appender").remove();
+    $("#truth_ca").addClass("kumogakure").find(".select-selecter3").empty();
+    $(this).parent().parent().append('<div class = "select-wrap" id = "appender"> <i class = "select-wrap__icon"><i class="fa fa-angle-down"></i></i> <select class = "select-wrap__holder select-selecter2"></select></div>');
     
     $.ajax({
       type: 'GET',
@@ -35,8 +32,8 @@ $(function(){
 
   $(document).on("change", ".select-selecter2", function(){
     var formData = $(this).val(); 
-    $(".select-selecter3").remove();
-    $(this).parent().parent().append('<div class = "select-wrap"> <i class = "select-wrap__icon"><i class="fa fa-angle-down"></i></i> <select class = "select-wrap__holder select-selecter3"></select></div>');
+    $("#truth_ca").removeClass("kumogakure").find(".select-selecter3").empty();
+    
      
     $.ajax({
       type: 'GET',
@@ -54,9 +51,5 @@ $(function(){
     .fail(function(){
       alert('error');
     });
-  });
-  $(document).on("change", ".select-selecter3", function(){
-    var final = $(this).val();
-    $(".hidden-gone").val(final);
   });
 });

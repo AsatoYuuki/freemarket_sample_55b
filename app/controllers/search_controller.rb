@@ -1,5 +1,6 @@
 class SearchController < ApplicationController
   def index
+    @keywords = params[:search]
     keywords = params[:search]&.split(/[[:blank:]]+/)
     @items = []
     keywords&.each do |keyword| 
