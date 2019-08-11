@@ -198,28 +198,16 @@
               %label.checkbox-box__condition
                 売り切れ
         .search-button
-          
           .search-button-reset
             クリア
           .search-button-submit
             完了
-
     .right-side
       %h3.right-side__title
         新着商品
-      .itembox-content
-        %section.itembox-content__image-box
-          %figure.imagebox-content__image-box__photo
-            = image_tag "mercarinasi.jpg",height:'160px',width:'160px'
-          .photo-box
-            %h3.photo-box__name
-              はらドーナツ
-            .item-box-price
-              .item-box-price__num
-                ¥ 100
-              .item-box-price__like
-                = fa_icon 'heart-o', class:'heart'
-                %span.item-box-price__like__num 4
+      .item-search-results
+        - @items.each do |item|
+          = render 'shared/search-item' , item: item
 .second-head
   .second-head__box
     メルカリ

@@ -9,5 +9,7 @@ class CategoryController < ApplicationController
 
   def show
     @category = Category.find(params[:id])
+    # @itemsはより精度の高い検索結果を実装した後に配列で返す予定です。（8.10 祖父江）
+    @items = Item.where(category_id: params[:id])
   end
 end
