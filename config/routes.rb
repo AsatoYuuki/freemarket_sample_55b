@@ -7,7 +7,12 @@ Rails.application.routes.draw do
   resources :category,only:[:index,:show,:new]
   resource :mypage do
     resource :profile ,only: [:show]
-    resource :card ,only: [:show,:create] 
+    resource :cards ,only: [:new, :show, :create] do
+      collection do
+        post 'pay', to: 'cards#pay'
+        post 'delete', to: 'cards#delete'
+      end
+    end
     resource :logout ,only: [:show]
   end
   resources :items, only: [:show]
@@ -25,11 +30,11 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :card, only: [:new, :show] do
-    collection do
-      post 'show', to: 'card#show'
-      post 'pay', to: 'card#pay'
-      post 'delete', to: 'card#delete'
-    end
-  end
+  # resources :card, only: [:new, :show] do
+  #   collection do
+  #     post 'show', to: 'card#show'
+  #     post 'pay', to: 'card#pay'
+  #     post 'delete', to: 'card#delete'
+  #   end
+  # end
 end
