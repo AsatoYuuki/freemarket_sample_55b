@@ -16,7 +16,7 @@ class SellsController < ApplicationController
       @item = Item.new
       @item.images.build
     else
-      redirect_to new_login_signup_index_path
+      redirect_to new_user_session_path
     end
 
   end
