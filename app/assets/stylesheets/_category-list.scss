@@ -1,8 +1,8 @@
 .category_list{
   position: absolute;
   display: flex;
-  left:250px;
   z-index: 100;
+  top :100px;
 }
 
 .parent_category{
@@ -46,26 +46,35 @@
 }
 
 .category-delete-area{
-  width: 200px;
+  position: relative;
+  width: 900px;
   height:10px;
   box-sizing: border-box;
   position: absolute;
   display: flex;
-  top: 50px;
-  left:220px;
   z-index: 100;
 }
 
 .category-delete-are-side{
-  width: 20px;
-  height:100px;
-  box-sizing: border-box;
   position: absolute;
+  width: 15px;
+  height:655px;
+  box-sizing: border-box;
   display: flex;
-  top: 50px;
-  left:220px;
   z-index: 100;
 }
+
+.category-delete-are-side2{
+  position: relative;
+  width: 1515px;
+  height:655px;
+  right: 150px;
+  box-sizing: border-box;
+  display: flex;
+  z-index: 100;
+}
+
+
 
 .parent_select_box{
   text-decoration: none;

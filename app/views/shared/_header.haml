@@ -26,7 +26,18 @@
             = fa_icon 'tag', class: "search-icon-left"
             = link_to "", class: "search-brand-category append-ctegories" do
               ブランドから探す
-        
+      .category-delete-area
+      .category-delete-are-side
+      .category-delete-are-side2
+      .category-delete-are-side3
+      .category-delete-are-side4
+      .category_list.item-categories
+        .parents_list.hidden-categories
+          - @parents.each do |parent|
+            = link_to "#{parent.name}", category_path(parent), class: "parent_category",id: "#{parent.id}"
+        .children_list
+        .grand_children_list
+
       - if user_signed_in?
         %ul.toppage-header__box__bottom__li__right
           %li.toppage-header__box__bottom__li__right__iine
@@ -54,15 +65,3 @@
           %li.toppage-header__box__bottom__li__right2__login
             = link_to new_user_session_path, class: "toppage-header__box__bottom__li__right2__login__icon" do
               ログイン
-
-
--# カテゴリ検索のためのビュー(8/5追加)
-.category_list.item-categories
-  .parents_list.hidden-categories
-    - @parents.each do |parent|
-      = link_to "#{parent.name}", category_path(parent), class: "parent_category",id: "#{parent.id}"
-  .children_list
-  .grand_children_list
-
-.category-delete-area
-.category-delete-are-side
