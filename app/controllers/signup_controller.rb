@@ -46,7 +46,7 @@ class SignupController < ApplicationController
     family_name_kana: session[:family_name_kana],
     first_name_kana: session[:first_name_kana],
     cellphone_number: session[:cellphone_number],
-    post_number: session[:post_number],
+    post_number: session[:post_number].gsub(/-/,''),
     prefecture: session[:prefecture],
     city: session[:city],
     address: session[:address],

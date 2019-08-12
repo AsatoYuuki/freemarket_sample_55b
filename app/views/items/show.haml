@@ -45,8 +45,7 @@
       .same-item
         = link_to "", class: "same-item__name" do
           %p
-            = "#{@item.user.nickname}さんの他の出品"
-        
+            = "#{@item.user.nickname}さんの他の出品"        
         - @item.user.items.each do |item|
           - if item != @item
             .same-item__box
@@ -57,9 +56,7 @@
                   %p.same-item__box__individual__text-box__name 
                     = item.name
                   %p.same-item__box__individual__text-box__price 
-                    = item.price
-                
-        
+                    = item.price      
       .same-item
         = link_to "同じブランドの商品", "", class: "same-item__name" 
         .same-item__box

@@ -1,7 +1,7 @@
 $(function(){
 
   function createSelect(data) {
-    option =  `<option value ="${data.id}">${data.name}<option>`
+    option =  `<option value ="${data.id}">${data.name}</option>`
     return option;
   }
 
