@@ -7,7 +7,10 @@
       .toppage-header__box__top__right
         = form_with url: search_index_path, class:'buy-form',method: :get, local: true do|f|
           .toppage-header__box__top__right__search
-            = f.text_field :search,class: "search", placeholder: "何かお探しですか？"
+            - if @keywords == nil
+              = f.text_field :search,class: "search", placeholder: "何かお探しですか？"
+            - else
+              = f.text_field :search,class: "search", value: "#{@keywords}"
           %label
             .toppage-header__box__top__right__icon
               = f.submit 
