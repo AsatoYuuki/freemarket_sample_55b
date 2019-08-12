@@ -16,8 +16,7 @@
   .category-show__title
     = @category.name + "の商品一覧"
   .category-show__results
-    -# バグ対策のため
-    -# - @items.each do |item|
+    - @items.each do |item|
       = render 'shared/search-item' , item: item
 
 .toppage-footer__image
