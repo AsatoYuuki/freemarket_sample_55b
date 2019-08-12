@@ -29,13 +29,16 @@
     %tr.main-container-hatapon--right--wide
       %th.main-container-hatapon--right--wide__question カテゴリー
       %td.main-container-hatapon--right--wide__value
-        = link_to "メンズ", "", class:"table-a classification"
-        = link_to "", class: "table-a classification" do
+        = link_to category_path(@item.category.parent.parent.id) , class:"table-a classification" do
+          =@item.category.parent.parent.name
+        = link_to category_path(@item.category.parent.id), class: "table-a classification" do
           = fa_icon "arrow-right"
-          %span トップス
-        = link_to "", class: "table-a classification" do
+          %span 
+            = @item.category.parent.name
+        = link_to category_path(@item.category.id), class: "table-a classification" do
           = fa_icon "arrow-right"
-          %span カットソー
+          %span 
+            = @item.category.name
     %tr.main-container-hatapon--right--wide
       %th.main-container-hatapon--right--wide__question ブランド
       %td.main-container-hatapon--right--wide__value
@@ -48,23 +51,23 @@
     %tr.main-container-hatapon--right--wide
       %th.main-container-hatapon--right--wide__question 商品の状態
       %td.main-container-hatapon--right--wide__value 
-        = @item.condition
+        = Condition.find(@item.condition).name
     %tr.main-container-hatapon--right--wide
       %th.main-container-hatapon--right--wide__question 配送料の負担
       %td.main-container-hatapon--right--wide__value 
-        = @item.send_cost
+        = Cost.find(@item.send_cost).name
     %tr.main-container-hatapon--right--wide
       %th.main-container-hatapon--right--wide__question 配送の方法
       %td.main-container-hatapon--right--wide__value 
-        = @item.send_method
+        = Post.find(@item.send_method).name
     %tr.main-container-hatapon--right--wide
       %th.main-container-hatapon--right--wide__question 配送元地域
       %td.main-container-hatapon--right--wide__value 
-        = @item.send_place
+        = Prefecture.find(@item.send_place).name
     %tr.main-container-hatapon--right--wide
       %th.main-container-hatapon--right--wide__question 発送日の目安
       %td.main-container-hatapon--right--wide__value 
-        = @item.send_day
+        = Day.find(@item.send_day).name
 .price-box
   %span.price-box__number 
     = "¥#{@item.price}" 
