@@ -43,6 +43,7 @@
               ありがとうございます。
             %p.complete-inner__contents__text
               会員登録が完了しました。
-            %button.complete-inner__submit
-              メルカリをはじめる
+            = link_to root_path do
+              %button.complete-inner__submit
+                メルカリをはじめる
     = render "shared/footer-log"
