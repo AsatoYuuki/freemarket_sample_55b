@@ -84,4 +84,12 @@ $(function() {
     $(".now-selected-gray").removeClass("now-selected-gray")
   });
   
+  $(".category-delete-are-side2").on("mouseover",function(){
+    $(".parents_list").addClass("hidden-categories");
+    $(".child_category").remove();
+    $(".grand_child_category").remove();
+    $(".now-selected-red").removeClass("now-selected-red")
+    $(".now-selected-gray").removeClass("now-selected-gray")
+  });
+
 });
