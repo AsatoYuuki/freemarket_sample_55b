@@ -73,6 +73,6 @@
     = "¥#{@item.price}" 
   %span.price-box__tax (税込)
   %span.price-box__send-tax 送料込み
-= link_to "購入画面に進む", "/purchase/#{@item.id}", class: "red-button"
+= link_to "購入画面に進む", purchase_path(@item.id), class: "red-button"
 %p.item-description 
   = @item.content
