@@ -1,16 +1,59 @@
-%h2 購入を確定しますか？
-%p Apple MacBook Pro 13インチ
-%p ¥135,000(送料込み)
-%br
-%h3 支払い方法
-- if @default_card_information.blank?
-  %br /
-- else
-  -#以下カード情報を表示
-  = "**** **** **** " + @default_card_information.last4
-  - exp_month = @default_card_information.exp_month.to_s
-  - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
-  = exp_month + " / " + exp_year
-%br
-= form_tag(action: :pay, method: :post) do
-  %button 購入する
+= form_with url: pay_purchase_index_path, action: :pay, method: :post, local: true do |f|
+  .log-body
+    .log-body__container
+      = render "shared/header-log"
+      .buy-item-wrapper
+        .body-confirmation
+          %h2.body-confirmation__title
+            購入内容の確認
+          .body-confirmation__main
+            .body-confirmation__main__inner
+              .body-confirmation__main__inner__top
+                %h3.buy-item-image
+                  = image_tag "sample-sell-bag.jpg" , width: 64, height:64
+                  = image_tag "#{@item.find_by(item_id: @item.id).image}", width: 64, height:64
+                %p.buy-item-name
+                  = @item.name
+              .body-confirmation__main__inner__bottom
+                %p.buy-price
+                  = "¥#{@item.price.to_s(:delimited)}"
+                  %span.buy-price__shipping-fee
+                    送料込み
+                %ul.buy-point
+                  ポイントはありません
+                %ul.final-price
+                  %li.final-price__cell
+                    支払い金額
+                  %li.final-price__cell2
+                    = "¥#{@item.price.to_s(:delimited)}"
+                %input{name: "item_id", type: "hidden", value: @item.id}
+                = f.submit "購入する", class: "submit-buy-button"    
+          .body-confirmation__address
+            .body-confirmation__address__inner
+              %h3.body-confirmation__address__inner__ship
+                配送先
+              .body-confirmation__address__inner__box
+              -# = "〒#{@users.post_number}"
+              -# %br
+              -# = "#{@user.prefecture}" + "#{@user.city}" + "#{@user.address}" + "#{@user.building}" 
+              -# %br
+              -# = "#{@user.first_name}" + "#{@user.family_name}"
+              -# %br
+              .body-confirmation__address__inner__bottom
+                =link_to "変更する ＞","",class: "body-confirmation__address__inner__bottom__link"
+          .body-confirmation__how-to-pay
+            .body-confirmation__how-to-pay__inner
+              %h4.body-confirmation__how-to-pay__inner__cregit
+                支払い方法
+              .body-confirmation__how-to-pay__inner__box
+                = "**** **** **** " + @default_card_information.last4
+                %br
+                - exp_month = @default_card_information.exp_month.to_s
+                - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
+                = exp_month + " / " + exp_year
+                %br
+                .body-confirmation__how-to-pay__inner__cregit__pic
+                  = image_tag "jcb.png",size: "25x25"
+                .body-confirmation__address__inner__bottom
+                  =link_to "変更する ＞","",class: "body-confirmation__address__inner__bottom__link"
+      = render "shared/footer-log"
