@@ -10,8 +10,7 @@
             .body-confirmation__main__inner
               .body-confirmation__main__inner__top
                 %h3.buy-item-image
-                  = image_tag "sample-sell-bag.jpg" , width: 64, height:64
-                  = image_tag "#{@item.find_by(item_id: @item.id).image}", width: 64, height:64
+                  = image_tag "#{@item.images.first.url}", width: 64, height:64
                 %p.buy-item-name
                   = @item.name
               .body-confirmation__main__inner__bottom
@@ -33,12 +32,12 @@
               %h3.body-confirmation__address__inner__ship
                 配送先
               .body-confirmation__address__inner__box
-              -# = "〒#{@users.post_number}"
-              -# %br
-              -# = "#{@user.prefecture}" + "#{@user.city}" + "#{@user.address}" + "#{@user.building}" 
-              -# %br
-              -# = "#{@user.first_name}" + "#{@user.family_name}"
-              -# %br
+              = "〒#{current_user.post_number}"
+              %br
+                = "#{Prefecture.find(current_user.prefecture).name}" + "#{current_user.city}" + "#{current_user.address}" + "#{current_user.building_name}" 
+              %br
+              = "#{current_user.first_name}" + "#{current_user.family_name}"
+              %br
               .body-confirmation__address__inner__bottom
                 =link_to "変更する ＞","",class: "body-confirmation__address__inner__bottom__link"
           .body-confirmation__how-to-pay
