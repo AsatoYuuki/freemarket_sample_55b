@@ -16,7 +16,7 @@ class User < ApplicationRecord
   validates :birthday_year, {presence: true}
   validates :birthday_month, {presence: true}
   validates :birthday, {presence: true}
-  validates :post_number, {presence: true}
+  validates :post_number, presence: true,numericality:{only_integer: true}
   validates :prefecture, {presence: true}
   validates :city, {presence: true}
   validates :address, {presence: true}

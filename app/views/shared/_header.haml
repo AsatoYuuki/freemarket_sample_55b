@@ -2,7 +2,7 @@
   .toppage-header__box
     .toppage-header__box__top
       %h1.mercari-top-logo
-        = link_to do
+        = link_to root_path do
           = image_tag 'main-logo.png', height: '52', width: '167'
       .toppage-header__box__top__right
         = form_with url: search_index_path, class:'buy-form',method: :get, local: true do|f|
@@ -26,7 +26,15 @@
             = fa_icon 'tag', class: "search-icon-left"
             = link_to "", class: "search-brand-category append-ctegories" do
               ブランドから探す
-        
+      .category-delete-area
+      .category-delete-are-side
+      .category_list.item-categories
+        .parents_list.hidden-categories
+          - @parents.each do |parent|
+            = link_to "#{parent.name}", category_path(parent), class: "parent_category",id: "#{parent.id}"
+        .children_list
+        .grand_children_list
+
       - if user_signed_in?
         %ul.toppage-header__box__bottom__li__right
           %li.toppage-header__box__bottom__li__right__iine
@@ -54,15 +62,3 @@
           %li.toppage-header__box__bottom__li__right2__login
             = link_to new_user_session_path, class: "toppage-header__box__bottom__li__right2__login__icon" do
               ログイン
-
-
--# カテゴリ検索のためのビュー(8/5追加)
-.category_list.item-categories
-  .parents_list.hidden-categories
-    - @parents.each do |parent|
-      = link_to "#{parent.name}", category_path(parent), class: "parent_category",id: "#{parent.id}"
-  .children_list
-  .grand_children_list
-
-.category-delete-area
-.category-delete-are-side

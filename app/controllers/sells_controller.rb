@@ -12,8 +12,12 @@ class SellsController < ApplicationController
   end
 
   def new
-    @item = Item.new
-    @item.images.build
+    if user_signed_in?
+      @item = Item.new
+      @item.images.build
+    else
+      redirect_to new_user_session_path
+    end
   end
 
   def create
