@@ -10,9 +10,10 @@ $(function(){
   
   $(".select-selecter").on("change", function(){
     var formData = $(this).val(); 
-    $(".select-selecter2").remove();
-    $(".select-selecter3").remove();
-    $(this).parent().parent().append('<div class = "select-wrap"> <i class = "select-wrap__icon"><i class="fa fa-angle-down"></i></i> <select class = "select-wrap__holder select-selecter2"></select></div>');
+    $(".hidden-gone").val("");
+    $("#select2").remove();
+    $("#select3").remove();
+    $(this).parent().parent().append('<div class = "select-wrap" id = "select2"> <i class = "select-wrap__icon"><i class="fa fa-angle-down"></i></i> <select class = "select-wrap__holder select-selecter2"><option disabled selected value>--</option></select></div>');
     
     $.ajax({
       type: 'GET',
@@ -35,8 +36,9 @@ $(function(){
 
   $(document).on("change", ".select-selecter2", function(){
     var formData = $(this).val(); 
-    $(".select-selecter3").remove();
-    $(this).parent().parent().append('<div class = "select-wrap"> <i class = "select-wrap__icon"><i class="fa fa-angle-down"></i></i> <select class = "select-wrap__holder select-selecter3"></select></div>');
+    $(".hidden-gone").val("");
+    $("#select3").remove();
+    $(this).parent().parent().append('<div class = "select-wrap" id = "select3"> <i class = "select-wrap__icon"><i class="fa fa-angle-down"></i></i> <select class = "select-wrap__holder select-selecter3"><option disabled selected value>--</option></select></div>');
      
     $.ajax({
       type: 'GET',
@@ -60,3 +62,4 @@ $(function(){
     $(".hidden-gone").val(final);
   });
 });
+
