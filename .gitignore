@@ -28,3 +28,6 @@
 
 # Add .envfile
 /.env
+
+
+/public/uploads/*

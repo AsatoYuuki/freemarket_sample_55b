@@ -1,0 +1,11 @@
+$(function(){
+  $(".delete-item-btn").click(function(e){
+    e.preventDefault();
+    $(".modal-inner").fadeIn(500);
+    $(".delete").fadeIn(500);
+  });
+  $(".no-btn").click(function(){
+    $(".modal-inner").fadeOut(300);
+    $(".delete").fadeOut(300);
+  });
+});

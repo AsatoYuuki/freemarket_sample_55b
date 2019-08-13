@@ -7,12 +7,20 @@ Rails.application.routes.draw do
     resource :profile ,only: [:show]
     resource :card ,only: [:show,:create] 
     resource :logout ,only: [:show]
+    resource :listings ,only:[:show] do
+      resources :display, only:[:show,:destroy]
+    end
   end
-  resources :items, only: [:show]
+  resources :items, only: [:show,:destroy]
+
 
   resources :sells 
 
   resource :users 
+ 
+  resource :sell do
+  end
+
 
   resources :signup do
     collection do
