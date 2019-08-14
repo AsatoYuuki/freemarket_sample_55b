@@ -1,0 +1,41 @@
+.purchase{
+  width: 100%;
+
+  background-color: $background_gray;
+  &__image{
+    display: block;
+    width:200px;
+    margin: auto;
+  }
+
+  &__container{
+    @include box(500px);
+    margin: auto;
+    padding-bottom: 20px;
+    &__title{
+      @include title-box;
+    }
+    &__description{
+      display: block;
+      margin-top: 40px;
+      text-align: center;
+      margin-bottom: 200px;
+    }
+    &__link{
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      top:20px;
+      display: block;
+      @include submit-button(200px,$red);
+      padding: 15px;
+      box-sizing: border-box;
+      margin:auto;
+    }
+    &__footer{
+      display: block;
+      height: 300px;
+    }
+  }
+}

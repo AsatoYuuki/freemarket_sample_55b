@@ -12,7 +12,7 @@ crumb :profile do
 end
 
 crumb :card do
-  link "支払い方法", mypage_card_path
+  link "支払い方法", mypage_cards_path
   parent :mypage
 end
 
@@ -21,6 +21,10 @@ crumb :logout do
   parent :mypage
 end
 
+crumb :credit do
+  link "クレジットカード情報入力"
+  parent :card
+end
 crumb :listing do
   link "出品した商品-出品中", mypage_listings_path
   parent :mypage
