@@ -3,7 +3,7 @@
 .main-container-hatapon
   .main-container-hatapon--left
     .main-container-hatapon--left--big
-      = image_tag "#{item.images.url}", class: "photo-screen"
+      = image_tag "#{ @item.images.first.url}", class: "photo-screen"
     .main-container-hatapon--left--small
       - @item.images.each do |image|
         .main-container-hatapon--left--small__1
