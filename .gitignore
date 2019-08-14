@@ -27,4 +27,6 @@
 /config/master.key
 
 # Add .envfile
+/public/uploads/*
 /.env.development
+
