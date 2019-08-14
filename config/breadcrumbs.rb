@@ -20,3 +20,13 @@ crumb :logout do
   link "ログアウト", mypage_logout_path
   parent :mypage
 end
+
+crumb :listing do
+  link "出品した商品-出品中", mypage_listings_path
+  parent :mypage
+end
+
+crumb :display do
+  link "出品商品画面", mypage_listings_display_path
+  parent :listing
+end

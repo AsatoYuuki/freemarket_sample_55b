@@ -3,12 +3,12 @@
 .main-container-hatapon
   .main-container-hatapon--left
     .main-container-hatapon--left--big
-      = image_tag "/assets/avator.png", class: "photo-screen"
+      = image_tag "#{item.images.url}", class: "photo-screen"
     .main-container-hatapon--left--small
       - @item.images.each do |image|
         .main-container-hatapon--left--small__1
           = image_tag "#{image.url}", class: "photo-screen"
-        //@item.images.each_with_index |
+        
   %table.main-container-hatapon--right
     %tr.main-container-hatapon--right--wide
       %th.main-container-hatapon--right--wide__question 出品者
