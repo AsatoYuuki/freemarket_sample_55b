@@ -9,13 +9,11 @@
     = render "shared/side-list"
     .right-content
       .right-content__main-box
-        = render "shared/credit_confirmation"
-        = render "shared/credit"
-        -# クレジットカードのサーバサイドを作業される方へ
-        -# 情報登録の有無によって上記２つの部分テンプレートの表示を切り替えてください
-        -# 2019 7/26 祖父江
+        - if current_user.cards.present?
+          = render "shared/credit_confirmation"
+        - else
+          = render "shared/credit"
 .toppage-footer__image
   = image_tag 'mercari__footer.jpg', class: 'footer__image__pic', height: '260', width: '100%'
 .last-footer
   = render "shared/footer"
-

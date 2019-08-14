@@ -59,7 +59,7 @@ class SignupController < ApplicationController
 
     if @user.save
       sign_in(@user)
-      redirect_to new_login_complete_signup_index_path
+      redirect_to  new_mypage_cards_path
     else
       render '/signup/new_login'
     end

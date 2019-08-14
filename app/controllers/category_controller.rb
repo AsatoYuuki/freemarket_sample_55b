@@ -8,8 +8,7 @@ class CategoryController < ApplicationController
   end
 
   def show
-    @category = Category.find(params[:id])
-   
+    @category = Category.find(params[:id])  
     if @category.descendants.exists?
       @items = []
       @items += Item.where(category_id: params[:id])
@@ -20,5 +19,4 @@ class CategoryController < ApplicationController
       @items = Item.where(category_id: params[:id])
     end
   end
-  
 end

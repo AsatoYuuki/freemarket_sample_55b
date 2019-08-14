@@ -92,3 +92,5 @@ end
 gem 'gon'
 gem "jquery-rails"
 gem 'ransack'
+gem 'payjp'
+gem 'dotenv-rails'
