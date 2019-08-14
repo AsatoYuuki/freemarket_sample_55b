@@ -48,7 +48,10 @@
           %th.main-container-hatapon--right--wide__question 配送料の負担
           %td.main-container-hatapon--right--wide__value 
             .send_cost
+            -begin
               = Cost.find(@item.send_cost).name
+            -rescue
+              = "---"
         %tr.main-container-hatapon--right--wide
           %th.main-container-hatapon--right--wide__question 配送の方法
           %td.main-container-hatapon--right--wide__value 
