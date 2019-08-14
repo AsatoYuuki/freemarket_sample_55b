@@ -1,5 +1,3 @@
-@import "variable";
-
 .mypage-todo{
   margin: 0;
   padding: 0;
@@ -45,7 +43,7 @@
     #mypage-tab-notification{
       list-style: none;
       padding: 0;
-      margin: 0 0 40px 0;
+      margin-bottom: 40px;
         
       .mypage-tab-notification__link{
         position: relative;
