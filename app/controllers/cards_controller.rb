@@ -12,6 +12,9 @@ class CardsController < ApplicationController
   end
 
   def pay 
+    before_uri = URI.parse(request.referer)
+    path = Rails.application.routes.recognize_path(before_uri.path)
+    request_path = before_uri.path
     Payjp.api_key = ENV["PAYJP_PRIVATE_KEY"]
     if params['payjp-token'].blank?
       redirect_to action: "new"
@@ -22,7 +25,11 @@ class CardsController < ApplicationController
       ) 
       @card = Card.new(user_id: current_user.id, customer_id: customer.id, card_id: customer.default_card)
       if @card.save
-        redirect_to mypage_cards_path
+        if request_path == "/mypage/cards/new"
+        redirect_to new_login_complete_signup_index_path
+        else request_path == "/mypage/cards/credit_add"
+          redirect_to mypage_cards_path
+        end
       else
         redirect_to action: "pay"
       end
@@ -46,7 +53,7 @@ class CardsController < ApplicationController
   def show
     card = Card.where(user_id: current_user.id).first
     if card.blank?
-      redirect_to action: "new" 
+      
     else
       Payjp.api_key = ENV["PAYJP_PRIVATE_KEY"]
       customer = Payjp::Customer.retrieve(card.customer_id)

@@ -20,3 +20,8 @@ crumb :logout do
   link "ログアウト", mypage_logout_path
   parent :mypage
 end
+
+crumb :credit do
+  link "クレジットカード情報入力"
+  parent :card
+end
