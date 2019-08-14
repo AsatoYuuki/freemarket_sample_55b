@@ -73,7 +73,8 @@
         = Day.find(@item.send_day).name
 .price-box
   %span.price-box__number 
-    = "¥#{@item.price}" 
+    - price = add_comma(@item.price)
+    = "¥#{price}" 
   %span.price-box__tax (税込)
   %span.price-box__send-tax 送料込み
 = link_to "購入画面に進む", "", class: "red-button"
