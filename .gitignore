@@ -28,4 +28,5 @@
 
 # Add .envfile
 /public/uploads/*
-env.development
+/.env.development
+
