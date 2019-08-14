@@ -1,0 +1,111 @@
+.top-header
+  = render "shared/header"
+%nav.second-header
+  %ul.second-header__box
+    - breadcrumb :display
+    = breadcrumbs pretext: "",separator: " &rsaquo; ", class: "bread"
+
+#wall-o
+.wallpaper-hatakeyama
+  .item-box
+    %h1.heading 
+      = @item.name
+    .main-container-hatapon
+      .main-container-hatapon--left
+        .main-container-hatapon--left--big
+          = image_tag "#{@item.images.first.url}", class: "photo-screen"
+        .main-container-hatapon--left--small
+          - @item.images.each do |image|
+            .main-container-hatapon--left--small__1
+              = image_tag "#{image.url}", class: "photo-screen"
+           
+      %table.main-container-hatapon--right
+        %tr.main-container-hatapon--right--wide
+          %th.main-container-hatapon--right--wide__question 出品者
+          %td.main-container-hatapon--right--wide__value
+            = link_to  mypage_profile_path, class: "table-a sender-name" do
+              %p 
+                = current_user.nickname
+        %tr.main-container-hatapon--right--wide
+          %th.main-container-hatapon--right--wide__question カテゴリー
+          %td.main-container-hatapon--right--wide__value
+            = link_to category_path(@item.category.parent.parent.id) , class:"table-a classification" do
+              =@item.category.parent.parent.name
+            = link_to category_path(@item.category.parent.id), class: "table-a classification" do
+              = fa_icon "arrow-right"
+              %span 
+                = @item.category.parent.name
+            = link_to category_path(@item.category.id), class: "table-a classification" do
+              = fa_icon "arrow-right"
+              %span 
+                = @item.category.name
+        %tr.main-container-hatapon--right--wide
+          %th.main-container-hatapon--right--wide__question 商品の状態
+          %td.main-container-hatapon--right--wide__value 
+            .condition
+              = Condition.find(@item.condition).name
+        %tr.main-container-hatapon--right--wide
+          %th.main-container-hatapon--right--wide__question 配送料の負担
+          %td.main-container-hatapon--right--wide__value 
+            .send_cost
+              = Cost.find(@item.send_cost).name
+        %tr.main-container-hatapon--right--wide
+          %th.main-container-hatapon--right--wide__question 配送の方法
+          %td.main-container-hatapon--right--wide__value 
+            .send_method
+              = Post.find(@item.send_method).name
+        %tr.main-container-hatapon--right--wide
+          %th.main-container-hatapon--right--wide__question 配送元地域
+          %td.main-container-hatapon--right--wide__value 
+            .send_place
+              = Prefecture.find(@item.send_place).name
+        %tr.main-container-hatapon--right--wide
+          %th.main-container-hatapon--right--wide__question 発送日の目安
+          %td.main-container-hatapon--right--wide__value 
+            .send_day
+              = Day.find(@item.send_day).name
+    .price-box
+      %span.price-box__number 
+        = "¥#{@item.price}" 
+      %span.price-box__number__tax (税込)
+      %span.price-box__number__send-tax 送料込み
+    .item-description
+    %span.yenmark
+      = @item.content
+
+  .item-box-change
+    .edit-btn
+      商品の編集
+    %p.item-box-change__or
+      or
+    .btn-gray
+      出品を一旦停止する
+    .btn-gray.delete-item-btn
+      この商品を削除する
+
+  .item-box-change 
+    %p.message-box__warning 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+    %textarea.message-box__input
+    = link_to "コメントする", "", class: "message-box__submit"
+
+
+
+.toppage-footer__image
+  = image_tag 'mercari__footer.jpg', class: 'footer__image__pic', height: '260', width: '100%'
+.last-footer
+  = render "shared/footer"
+
+
+
+.modal-inner
+.delete
+  .delete-item
+    .delete-item-box
+      .delete-announce  確認
+      .delete-text 削除すると二度と復活できません。
+      .delete-text 削除する代わりに停止することもできます。
+      .delete-text 本当に削除しますか？
+    .btn-box
+      .no-btn キャンセル
+      .yes-btn 
+        = link_to '削除する',mypage_listings_display_path(@item.id), method: :delete, class: "yes"

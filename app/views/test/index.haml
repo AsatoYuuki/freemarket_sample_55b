@@ -2,7 +2,13 @@
 
 .toppage-main
   .toppage-main__visual
-    = image_tag 'top_bg_camp.jpg', class: 'header__image__pic', height: '390', width: '100%'
+    %ul.slick
+      %li.top_bg_pitures
+        = image_tag 'top_bg_camp.jpg', class: 'mercari-header-pictures', height: '390', width: '100%'
+      %li.top_bg_pitures
+        = image_tag 'top_bg_pc.jpg', class: 'mercari-header-pictures', height: '390', width: '100%'
+      %li.top_bg_pitures
+        = image_tag 'top_bg_summerfes.jpg', class: 'mercari-header-pictures', height: '390', width: '100%'
   %section.toppage-main__pickup-category
     %h2.pickup-category-head
       ピックアップカテゴリー

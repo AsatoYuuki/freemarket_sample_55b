@@ -13,16 +13,21 @@ Rails.application.routes.draw do
       collection do
         post 'pay', to: 'cards#pay'
         post 'delete', to: 'cards#delete'
+        get 'credit_add', to: 'cards#credit_add'
       end
     end
     resource :logout ,only: [:show]
+    resource :listings ,only:[:show] do
+      resources :display, only:[:show,:destroy]
+    end
   end
-  resources :items, only: [:show]
+  resources :items, only: [:show,:destroy]
 
-  resources :sells 
 
-  resource :users 
+  resources :sells,only:[:index,:new,:create,:edit]
 
+  resource :users,only: [:new]
+  
   resources :signup do
     collection do
       get 'new_login'

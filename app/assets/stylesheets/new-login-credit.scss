@@ -10,6 +10,11 @@
   color: $red;
 };
 
+.hissu_tag{
+  @include form-icon($red);
+    padding: 1px;
+}
+
 .credit-body{
   position: relative;
   min-height: 100%;
