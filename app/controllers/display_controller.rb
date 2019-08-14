@@ -1,14 +1,16 @@
 class DisplayController < ApplicationController
-before_action :item_id, except: [:show,:destroy]
+
+  before_action :set_item, only: [:show, :destroy]
+  
   def show
-    @item = Item.find(params[:id])
-    
   end
 
   def destroy
-    @item = Item.find(params[:id])
     @item.destroy
     redirect_to controller: 'mypages',action: 'show'
   end
   
+  def set_item
+    @item = Item.find(params[:id])
+  end
 end
