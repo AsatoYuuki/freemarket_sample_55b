@@ -3,7 +3,7 @@
     = render "shared/header-log"
     .main-container
       %section.sell-box
-        = form_for @item, url: sell_path do |f|
+        = form_for @item, url: sell_path,  method: :patch do |f|
           .sell-box__inner
             %h2.sell-box__inner__head
               商品の情報を入力

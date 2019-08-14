@@ -40,11 +40,13 @@ class SellsController < ApplicationController
   end
 
   def update
-    #@item = Item.find(params[:id])
+    @item = Item.find(params[:id])
     binding.pry
-    @item.update(create_params)
-    redirect_to root_path
-
+    if @item.update(update_params)
+      redirect_to root_path
+    else
+      redirect_to action: 'edit'
+    end
   end
 
   private
@@ -54,8 +56,11 @@ class SellsController < ApplicationController
   end
 
   def create_params
-    params.require(:item).permit(:name, :content, :price, :size, :condition, :send_cost, :send_method, :send_place, :send_day, :buyer_id, :status, :brand_id, :category_id, images_attributes: [:url]).merge(user_id: current_user.id)
+    params.require(:item).permit(:name, :content, :price, :size, :condition, :send_cost, :send_method, :send_place, :send_day, :buyer_id, :status, :brand_id, :category_id, images_attributes: [:url, :id]).merge(user_id: current_user.id)
   end
-  
+
+  def update_params
+    params.require(:item).permit(:name, :content, :price, :size, :condition, :send_cost, :send_method, :send_place, :send_day, :buyer_id, :status, :brand_id, :category_id)
+  end
 
 end
