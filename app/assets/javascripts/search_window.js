@@ -92,4 +92,8 @@ $(function() {
     $(".now-selected-gray").removeClass("now-selected-gray")
   });
 
+  $(".itemsearch-box").on("mouseover",function(){
+    var obj = this;
+    obj.scrollTop = obj.scrollHeight;
+  });
 });
