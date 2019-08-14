@@ -26,7 +26,7 @@ class CardsController < ApplicationController
       @card = Card.new(user_id: current_user.id, customer_id: customer.id, card_id: customer.default_card)
       if @card.save
         if request_path == "/mypage/cards/new"
-        redirect_to new_login_complete_signup_index_path
+          redirect_to new_login_complete_signup_index_path
         else request_path == "/mypage/cards/credit_add"
           redirect_to mypage_cards_path
         end
