@@ -14,13 +14,10 @@ Rails.application.routes.draw do
   resources :items, only: [:show,:destroy]
 
 
-  resources :sells 
+  resources :sells,only:[:index,:new,:create,:edit]
 
-  resource :users 
- 
-  resource :sell 
-
-
+  resource :users,only: [:new]
+  
   resources :signup do
     collection do
       get 'new_login'
