@@ -21,14 +21,30 @@ class SellsController < ApplicationController
   end
 
   def create
-    Item.create(create_params)
-    redirect_to root_path
+    @item = Item.new(create_params)
+    if @item.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   def edit
+    @item = Item.find(params[:id])
+    @category = @item.category.siblings
+    @parents = @item.category.parent
+    @parents_sib =@parents.siblings
+    @grands = @item.category.root
+    @grands_sib = @grands.siblings
+    redirect_to root_path unless @item.user_id == current_user.id
   end
 
   def update
+    #@item = Item.find(params[:id])
+    binding.pry
+    @item.update(create_params)
+    redirect_to root_path
+
   end
 
   private

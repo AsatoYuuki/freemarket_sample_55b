@@ -1,13 +1,9 @@
 $(function(){
-
   function createSelect(data) {
     option =  `<option value ="${data.id}">${data.name}</option>`
     return option;
   }
 
-  
-
-  
   $(".select-selecter").on("change", function(){
     var formData = $(this).val(); 
     $(".hidden-gone").val("");
