@@ -2,16 +2,25 @@
 - @items.each do |item|
   .item-box-contents__items-box 
     = link_to item_path(item.id), class: "item-box-contents__items-box__name" do
-      .item-box-contents__items-box__photo
-        -# = image_tag "#{item.images.first.url}", class: 'toppage-item-pic'
+      .item-box-contents__items-box__photo.toppage-item-card
+        - if item.buyer_id != nil
+          .sold-flag  
+          .sold-flag__text
+            sold 
+        - begin
+          = image_tag "#{item.images.first.url}",class:"toppage-item-pic" 
+        - rescue  
+          = image_tag "",class:"itemsearch-box__picture" 
       .item-box-contents__items-box__body
         .item-box-contents__items-box__body__name
           = item.name
         .item-box-contents__items-box__body__number
           .items-box-price
-            = item.price
+            - price =  add_comma(item.price)
+            = "￥" + price
           .items-box-heart
-            .items-box-heart__icon
-              = fa_icon 'heart', class: "search-icon-right"
-            .items-box-heart__count
-              2
+          -#  いいね機能を実装する場合は以下を外してください。
+            -# .items-box-heart__icon
+            -#   = fa_icon 'heart', class: "search-icon-right"
+            -# .items-box-heart__count
+            -#   2
