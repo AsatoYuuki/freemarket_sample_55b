@@ -319,9 +319,23 @@ select {
 }
 
 //ここからプレビュー用
-.pic-man{
-  height: 100%;
+.pic-form{
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
+
+
+.pic-man{
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  
+}
+
+
 
 .kumogakure{
   display: none;

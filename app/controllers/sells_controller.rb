@@ -14,7 +14,7 @@ class SellsController < ApplicationController
   def new
     if user_signed_in?
       @item = Item.new
-      @item.images.build
+      5.times{@item.images.build}
     else
       redirect_to new_user_session_path
     end
@@ -31,6 +31,17 @@ class SellsController < ApplicationController
 
   def edit
     @item = Item.find(params[:id])
+    @length =@item.images.length 
+    if @length == 1
+      4.times{@item.images.build}
+    elsif @length == 2
+      3.times{@item.images.build}
+    elsif @length == 3
+      2.times{@item.images.build}
+    elsif @length == 4
+      1.times{@item.images.build}
+    end
+
     @category = @item.category.siblings
     @parents = @item.category.parent
     @parents_sib =@parents.siblings
@@ -41,8 +52,7 @@ class SellsController < ApplicationController
 
   def update
     @item = Item.find(params[:id])
-    binding.pry
-    if @item.update(update_params)
+    if @item.update(create_params)
       redirect_to root_path
     else
       redirect_to action: 'edit'

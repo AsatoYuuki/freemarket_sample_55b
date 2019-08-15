@@ -14,39 +14,14 @@
                   %span.sell-form__upload-box__head__require.icon
                     必須
                 %p.sell-form__upload-box__text
-                  最大10枚までアップロードできます
+                  最大5枚までアップロードできます
                 .sell-form__upload-box__image-upload
                   .preview-open
-                  .click-point{data: {id: 1}}
-                    = f.fields_for :images do |i|
-                      = f.label :images_attributes_0_url, class: "top-heigter" do
-                        .pic-man                       
-                          %p.sell-form__upload-box__image-upload__text クリックしてファイルをアップロード    
-                        = i.file_field :url, class: "kumogakure pic-gone"
-                  .click-point.kumogakure{data: {id: 2}}
-                    = f.fields_for :images do |i|
-                      = f.label :images_attributes_1_url, class: "top-heigter" do
-                        .pic-man                       
-                          %p.sell-form__upload-box__image-upload__text クリックしてファイルをアップロード    
-                        = i.file_field :url, class: "kumogakure pic-gone"
-                  .click-point.kumogakure{data: {id: 3}}
-                    = f.fields_for :images do |i|
-                      = f.label :images_attributes_2_url, class: "top-heigter" do
-                        .pic-man                       
-                          %p.sell-form__upload-box__image-upload__text クリックしてファイルをアップロード    
-                        = i.file_field :url, class: "kumogakure pic-gone"
-                  .click-point.kumogakure{data: {id: 4}}
-                    = f.fields_for :images do |i|
-                      = f.label :images_attributes_3_url, class: "top-heigter" do
-                        .pic-man                       
-                          %p.sell-form__upload-box__image-upload__text クリックしてファイルをアップロード    
-                        = i.file_field :url, class: "kumogakure pic-gone" 
-                  .click-point.kumogakure{data: {id: 5}}
-                    = f.fields_for :images do |i|
-                      = f.label :images_attributes_4_url, class: "top-heigter" do
-                        .pic-man                       
-                          %p.sell-form__upload-box__image-upload__text クリックしてファイルをアップロード    
-                        = i.file_field :url, class: "kumogakure pic-gone"              
+                  = f.fields_for :images do |i|
+                    = i.label :url, class: "top-heigter" do
+                      .pic-man.kumogakure{data: {id: 1}}                       
+                        %p.sell-form__upload-box__image-upload__text クリックしてファイルをアップロード    
+                      = i.file_field :url, class: "kumogakure pic-gone"         
             .sell-box__content
               .content-item
                 %label.content-item__name.item
