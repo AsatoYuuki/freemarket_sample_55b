@@ -3,7 +3,7 @@
     = render "shared/header-log"
     .main-container
       %section.sell-box
-        = form_for @item, url: sells_path do |f|
+        = form_for @item, url: sell_path,  method: :patch do |f|
           .sell-box__inner
             %h2.sell-box__inner__head
               商品の情報を入力
@@ -17,11 +17,35 @@
                   最大5枚までアップロードできます
                 .sell-form__upload-box__image-upload
                   .preview-open
+                    - if @length == 1
+                      - @item.images.each_with_index do |image, i|
+                        - if i == 0                   
+                          .previews{data:{id: "#{i}"}}
+                            %img.open-pic{src: "#{image.url}"}
+                              = link_to "削除", "", class: "kill-me"
+                    - if @length == 2
+                      - @item.images.each_with_index do |image, i|
+                        - if i <=  1                  
+                          .previews{data:{id: "#{i}"}}
+                            %img.open-pic{src: "#{image.url}"}
+                              = link_to "削除", "", class: "kill-me"
+                    - if @length == 3
+                      - @item.images.each_with_index do |image, i|
+                        - if i <= 2                   
+                          .previews{data:{id: "#{i}"}}
+                            %img.open-pic{src: "#{image.url}"}
+                              = link_to "削除", "", class: "kill-me"
+                    - if @length == 4
+                      - @item.images.each_with_index do |image, i|
+                        - if i <= 3                   
+                          .previews{data:{id: "#{i}"}}
+                            %img.open-pic{src: "#{image.url}"}
+                              = link_to "削除", "", class: "kill-me"                 
                   = f.fields_for :images do |i|
                     = i.label :url, class: "top-heigter" do
-                      .pic-man.kumogakure{data: {id: 1}}                       
+                      .pic-form.kumogakure{data: {id: "1"}}                       
                         %p.sell-form__upload-box__image-upload__text クリックしてファイルをアップロード    
-                      = i.file_field :url, class: "kumogakure pic-gone"         
+                      = i.file_field :url, class: "kumogakure pic-gone-edit"           
             .sell-box__content
               .content-item
                 %label.content-item__name.item
@@ -55,11 +79,33 @@
                       %i.select-wrap__icon
                         = fa_icon 'angle-down'
                       %select.select-wrap__holder.select-selecter
-                        %option{:disabled => "disabled", :selected => "selected", :value => ""}--
-                        - @category.each do |parent|
-                          %option.parent_ca{value: parent.id}
-                            = parent.name
-                      = f.hidden_field :category_id, class: "hidden-gone"
+                        %option{value: @grands.id}
+                          = @grands.name
+                        - @grands_sib.each do |grand|
+                          -if grand != @grands
+                            %option.parent_ca{value: grand.id}
+                              = grand.name
+                    .select-wrap#select2
+                      %i.select-wrap__icon
+                        = fa_icon 'angle-down'
+                      %select.select-wrap__holder.select-selecter2
+                        %option{value: @parents.id }
+                          = @parents.name
+                        - @parents_sib.each do |parent|
+                          - if parent != @parents
+                            %option.parent_ca{value: parent.id}
+                              = parent.name
+                    .select-wrap#select3
+                      %i.select-wrap__icon
+                        = fa_icon 'angle-down'
+                      %select.select-wrap__holder.select-selecter3
+                        %option{value: @item.category.id }
+                          = @item.category.name
+                        - @item.category.siblings.each do |ca|
+                          - if ca != @item.category
+                            %option.parent_ca{value: ca.id}
+                              = ca.name                        
+                    = f.hidden_field :category_id, class: "hidden-gone"
                 .form-box-right__info
                   %label.form-box-right__info__text
                     商品の状態
@@ -162,7 +208,7 @@
                     %a.text__conf__link
                       加盟店規約
                     に同意したことになります。
-                  = f.submit "出品する", class: "text__submit-button"                    
+                  = f.submit "変更する", class: "text__submit-button"                    
                 = link_to mypage_path,class:"return-button" do
                   %button.text__submit-button-return
                     もどる

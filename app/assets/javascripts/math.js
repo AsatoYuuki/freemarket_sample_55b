@@ -12,4 +12,11 @@ $(function(){
       $(".uriage").text("-");
     }
   });
+  if ($(".sell-price-input__box").val() !== "") {
+    var starter = $(".sell-price-input__box").val();
+    var process = Math.floor(starter / 10);
+    var finish =  starter - process
+    $(".zeikin").text("¥" + process);
+    $(".uriage").text("¥" + finish);
+  }
 });

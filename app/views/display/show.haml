@@ -78,8 +78,9 @@
       = @item.content
 
   .item-box-change
-    .edit-btn
-      商品の編集
+    = link_to edit_sell_path(@item.id), class:"edit_linker" do
+      .edit-btn
+        商品の編集
     %p.item-box-change__or
       or
     .btn-gray

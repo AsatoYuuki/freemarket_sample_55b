@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   resources :items, only: [:show,:destroy]
 
 
-  resources :sells,only:[:index,:new,:create,:edit]
+  resources :sells,only:[:index,:new,:create,:edit,:update]
 
   resource :users,only: [:new]
   
