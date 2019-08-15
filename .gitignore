@@ -29,4 +29,4 @@
 # Add .envfile
 /public/uploads/*
 /.env.development
-
+/.env.production
