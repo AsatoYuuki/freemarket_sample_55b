@@ -1,5 +1,6 @@
 class SellsController < ApplicationController
-  before_action :category_set
+  before_action :category_set, only: [:new, :edit]
+  before_action :item_set, only: [:edit, :update]
 
   def index
     if params[:parent_id].present?
@@ -30,7 +31,6 @@ class SellsController < ApplicationController
   end
 
   def edit
-    @item = Item.find(params[:id])
     @length =@item.images.length 
     if @length == 1
       4.times{@item.images.build}
@@ -51,7 +51,6 @@ class SellsController < ApplicationController
   end
 
   def update
-    @item = Item.find(params[:id])
     if @item.update(create_params)
       redirect_to root_path
     else
@@ -69,8 +68,8 @@ class SellsController < ApplicationController
     params.require(:item).permit(:name, :content, :price, :size, :condition, :send_cost, :send_method, :send_place, :send_day, :buyer_id, :status, :brand_id, :category_id, images_attributes: [:url, :id]).merge(user_id: current_user.id)
   end
 
-  def update_params
-    params.require(:item).permit(:name, :content, :price, :size, :condition, :send_cost, :send_method, :send_place, :send_day, :buyer_id, :status, :brand_id, :category_id)
+  def item_set
+    @item = Item.find(params[:id])
   end
 
 end

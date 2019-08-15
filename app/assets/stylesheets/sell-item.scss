@@ -309,6 +309,10 @@
   }
 }
 
+.edit_linker{
+  text-decoration: none;
+}
+
 select {
   -webkit-appearance: none;/* ベンダープレフィックス(Google Chrome、Safari用) */
   -moz-appearance: none;	/* ベンダープレフィックス(Firefox用) */
