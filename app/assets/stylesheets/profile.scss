@@ -43,6 +43,9 @@
       margin-top: 10px;
       padding: 10px 16px 8px;
     }
+    &__name::placeholder{
+      color: $black;
+    }
     &__avator{
       height: 60px;
       width: 60px;

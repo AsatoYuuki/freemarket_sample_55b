@@ -5,7 +5,7 @@
   .profile-edit__top-box
     .profile-edit__top-box__container
       = image_tag "avator.png", class:"profile-edit__top-box__avator"
-      %input.profile-edit__top-box__name{placeholder: "current_user.name"}
+      %input.profile-edit__top-box__name{placeholder: "#{current_user.nickname}"}
   .profile-edit__under-box
     .profile-edit__under-box__input
       =  text_area :profile, :profile, class: "profile-edit__under-box__input__form",placeholder: "current_user.profile（空であれば定型文を記述してください）" 
